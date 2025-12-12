@@ -1,0 +1,558 @@
+{
+  "id": "vespers-host",
+  "name": "Vesper's Host",
+  "type": "dungeon",
+  "description": "A Fallen-themed dungeon set in the abandoned Vesper Station, a BrayTech facility overrun by Fallen enemies. Features mechanics reminiscent of Deep Stone Crypt raid, including corrupted augments (Scanner, Operator, Suppressor). This was the first dungeon to feature Contest Mode during its initial 48 hours.",
+  "encounters": [
+    {
+      "id": "vespers-host-activation",
+      "name": "Activation",
+      "description": "The opening encounter where players must deposit three nuclear cores into designated bins. Players use Scanner and Operator augments to identify and activate control panels in three different rooms (Heart, Lungs, Brain).",
+      "type": "opening",
+      "order": 1,
+      "mechanics": [
+        {
+          "id": "vespers-host-activation-initiate",
+          "name": "System Reboot",
+          "description": "Interact with the white sphere robot in the center of the room to reboot the system. This spawns a Brig enemy that must be defeated to begin the encounter.",
+          "type": "puzzle",
+          "solution": "Approach the central white sphere and interact with it to initiate the encounter. Defeat the spawned Brig to progress.",
+          "tips": [
+            "The sphere is clearly visible in the center of the main room",
+            "The Brig spawns immediately after interaction",
+            "Clear adds before engaging the Brig for easier management"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Time begins counting once the system is rebooted. Work efficiently to minimize time spent.",
+          "relatedMechanics": []
+        },
+        {
+          "id": "vespers-host-activation-scanner-acquisition",
+          "name": "Scanner Augment Acquisition",
+          "description": "After defeating the Brig, a Viral Carrier (Fallen Vandal) spawns carrying the Scanner augment. Defeating this enemy grants the Scanner augment, which allows identification of correct panels via minimap visualization.",
+          "type": "puzzle",
+          "solution": "Defeat the Viral Carrier that spawns after the Brig is eliminated. Pick up the Scanner augment (yellow icon). The augment appears on your character and modifies your minimap to show panels as yellow hexagons.",
+          "tips": [
+            "The Viral Carrier spawns in the main room after Brig defeat",
+            "Scanner augment has a timer - deposit it at terminals to reset the timer",
+            "The augment modifies your minimap to show interactive panels",
+            "Yellow hexagons on minimap represent shootable panels"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Augment timers are strict in contest mode. Deposit augments at terminals to reset timers and avoid death.",
+          "relatedMechanics": ["vespers-host-scanner-identification"]
+        },
+        {
+          "id": "vespers-host-activation-room-navigation",
+          "name": "Room Navigation (Heart, Lungs, Brain)",
+          "description": "Three doors labeled with symbols (Heart, Lungs, Brain) become accessible. Players must navigate to each room to complete the core deposit process. Each room must be completed once.",
+          "type": "traversal",
+          "solution": "Choose one of the three labeled doors and proceed through it. Clear all enemies in the room, including two invisible Machine Priest's Assistants. The order of rooms doesn't matter, but all three must be completed.",
+          "tips": [
+            "Room order is flexible - complete them in any order",
+            "Each room contains two invisible Machine Priest's Assistants",
+            "Clear all enemies before attempting panel mechanics",
+            "Use radar to locate invisible enemies"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Time spent in rooms counts toward encounter timer. Work quickly but safely.",
+          "relatedMechanics": ["vespers-host-scanner-identification", "vespers-host-operator-activation"]
+        },
+        {
+          "id": "vespers-host-scanner-identification",
+          "name": "Scanner Panel Identification",
+          "description": "With the Scanner augment active, approach panels in the designated rooms. The minimap shows yellow hexagons for panels. When you walk near a panel, the hexagon either turns white (correct panel) or disappears from the minimap (incorrect panel). There are four correct panels per room.",
+          "type": "puzzle",
+          "solution": "While holding Scanner augment, walk near each panel in the room. Watch your minimap - panels that turn white are correct and must be shot by the Operator. Note the locations of the four correct panels. Incorrect panels cause the hexagon to disappear from minimap.",
+          "tips": [
+            "Walk slowly near panels to see minimap changes clearly",
+            "White hexagons = correct panels to shoot",
+            "Disappearing hexagons = incorrect panels (don't shoot)",
+            "There are always exactly four correct panels per room",
+            "You can deposit Scanner at a terminal to let another player pick it up",
+            "Solo players can deposit Scanner, get Operator, then return to shoot panels"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Time pressure makes quick identification important. Practice efficient panel checking patterns.",
+          "relatedMechanics": ["vespers-host-activation-scanner-acquisition", "vespers-host-operator-activation"]
+        },
+        {
+          "id": "vespers-host-operator-acquisition",
+          "name": "Operator Augment Acquisition",
+          "description": "After clearing enemies in a room (including Machine Priest's Assistants), a Viral Carrier spawns carrying the Operator augment. This augment allows shooting of red control panels to spawn nuclear cores.",
+          "type": "puzzle",
+          "solution": "Defeat all enemies in the room, including the two Machine Priest's Assistants. A Viral Carrier will spawn carrying the Operator augment (red icon). Defeat it and pick up the augment.",
+          "tips": [
+            "Operator augment spawns after all room enemies are cleared",
+            "Operator augment has a timer - manage it carefully",
+            "You can deposit Scanner at a terminal before getting Operator",
+            "In teams, coordinate who gets which augment"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Augment timer management is critical. Deposit augments at terminals to reset timers.",
+          "relatedMechanics": ["vespers-host-operator-activation"]
+        },
+        {
+          "id": "vespers-host-operator-activation",
+          "name": "Operator Panel Activation",
+          "description": "With the Operator augment, shoot the four correct panels identified by the Scanner. Panels appear as red control panels. Shooting the correct panels spawns a nuclear core. Shooting an incorrect panel results in instant death for the Operator.",
+          "type": "puzzle",
+          "solution": "Using the Operator augment, shoot the four panels that the Scanner identified as correct (those that turned white on the minimap). Shoot them in any order. After shooting all four correct panels, a nuclear core spawns. If you shoot a wrong panel, you die instantly.",
+          "tips": [
+            "Only shoot panels that Scanner identified as correct (white hexagons)",
+            "Shooting wrong panels = instant death",
+            "All four correct panels must be shot to spawn the core",
+            "Order of shooting doesn't matter",
+            "In teams, have Scanner call out panel locations to Operator",
+            "Solo: Get Scanner, identify panels, deposit Scanner, get Operator, return and shoot"
+          ],
+          "difficulty": "hard",
+          "soloability": true,
+          "contestModeNotes": "Mistakes are costly - shooting wrong panels resets progress. Double-check panel locations before shooting.",
+          "relatedMechanics": ["vespers-host-scanner-identification", "vespers-host-nuclear-core-management"]
+        },
+        {
+          "id": "vespers-host-nuclear-core-management",
+          "name": "Nuclear Core and Radiation Management",
+          "description": "Picking up a nuclear core applies a Radiation debuff that stacks over time. At 10 stacks, the carrier dies. The core must be transported back to the main room and deposited in one of three bins. A Brig spawns when returning to main room and must be defeated before depositing.",
+          "type": "puzzle",
+          "solution": "Pick up the nuclear core after it spawns. Monitor your Radiation stacks (visible in debuff bar). To manage Radiation: (1) In teams, pass the core between players before anyone reaches 10 stacks, or (2) Solo players can drop the core briefly to let stacks decrease, then pick it up again. Transport core to main room, defeat the spawned Brig, then deposit core in one of three bins behind the central sphere.",
+          "tips": [
+            "Radiation stacks increase over time while holding core",
+            "10 stacks = instant death",
+            "Teams: Pass core between players before anyone hits 8-9 stacks",
+            "Solo: Drop core, wait for stacks to decrease, pick up again",
+            "Brig spawns in main room when you return with core",
+            "Defeat Brig before attempting to deposit",
+            "Three bins available - any can be used",
+            "Each room's core goes to a different bin (one per room)"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Radiation management is time-sensitive. Efficient core passing or dropping is essential. Don't let Radiation stacks get too high.",
+          "relatedMechanics": ["vespers-host-operator-activation"]
+        },
+        {
+          "id": "vespers-host-augment-terminals",
+          "name": "Augment Deposition Terminals",
+          "description": "White glowing terminals throughout the dungeon allow players to deposit and retrieve augments. Depositing an augment resets its timer, preventing death when the timer expires. Terminals facilitate role swaps between players.",
+          "type": "puzzle",
+          "solution": "Approach any white glowing terminal and interact with it to deposit your current augment. Other players (or you later) can pick up the deposited augment. This resets the augment timer, preventing death from timer expiration.",
+          "tips": [
+            "Deposit augments before timer expires to avoid death",
+            "Terminals allow role swapping between players",
+            "Solo players can use terminals to swap augments",
+            "Terminals are located in each room and main area",
+            "Depositing resets the timer completely"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Timer management is critical. Use terminals frequently to reset timers and avoid unnecessary deaths.",
+          "relatedMechanics": ["vespers-host-activation-scanner-acquisition", "vespers-host-operator-acquisition"]
+        }
+      ]
+    },
+    {
+      "id": "vespers-host-infiltration",
+      "name": "Infiltration",
+      "description": "A maze-like traversal encounter where players navigate while being pursued by Raneiks Unified. Players must manage Power Reserves to open doors, avoid the boss's attacks, and collect/deposit nuclear cores from Fallen Captains.",
+      "type": "traversal",
+      "order": 2,
+      "mechanics": [
+        {
+          "id": "vespers-host-infiltration-power-reserves",
+          "name": "Power Reserves Management",
+          "description": "Players interact with Fallen terminals throughout the maze to gain Power Reserves. These reserves are consumed to open doors within the maze. Closing doors refunds the power used, allowing efficient resource management.",
+          "type": "puzzle",
+          "solution": "Interact with Fallen terminals (glowing stations) to gain Power Reserves. Approach doors and interact to open them, consuming power. If you close a door (by interacting again or moving away), the power is refunded. Manage power efficiently by only keeping necessary doors open.",
+          "tips": [
+            "Interact with terminals to gain Power Reserves",
+            "Opening doors consumes power",
+            "Closing doors refunds power",
+            "Only keep necessary doors open to conserve power",
+            "Plan your route to minimize power usage",
+            "Multiple terminals available throughout the maze"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Time pressure makes efficient power management important. Don't waste power on unnecessary doors.",
+          "relatedMechanics": []
+        },
+        {
+          "id": "vespers-host-infiltration-raneiks-pursuit",
+          "name": "Raneiks Unified Pursuit",
+          "description": "Raneiks Unified actively pursues players through the maze. The boss has several dangerous attacks: AOE Servitor attacks, explosive mini-servitors, and an 'Integration' attack that tethers players and kills them within 5 seconds unless line of sight is broken.",
+          "type": "boss",
+          "solution": "Stay mobile and avoid Raneiks Unified. When you see the Integration tether (visual connection between you and the boss), immediately break line of sight by going around corners or behind cover. The tether has a 5-second timer before death. Avoid AOE attacks and destroy explosive mini-servitors before they reach you.",
+          "tips": [
+            "Raneiks Unified is constantly pursuing - keep moving",
+            "Integration attack tethers you - break line of sight immediately",
+            "5-second timer on Integration - find cover quickly",
+            "Destroy explosive mini-servitors before they explode",
+            "Use maze geometry to break line of sight",
+            "Don't engage the boss - focus on navigation and survival"
+          ],
+          "difficulty": "hard",
+          "soloability": true,
+          "contestModeNotes": "The pursuit is relentless. Efficient navigation and quick reactions to Integration attacks are essential.",
+          "relatedMechanics": []
+        },
+        {
+          "id": "vespers-host-infiltration-nuclear-core-collection",
+          "name": "Nuclear Core Collection from Captains",
+          "description": "Fallen Captains spawn throughout the maze. Defeating these Captains causes them to drop nuclear cores. These cores must be collected and deposited at correct stations to progress through the encounter.",
+          "type": "add-clear",
+          "solution": "Defeat Fallen Captains that spawn in the maze. They drop nuclear cores upon death. Pick up the cores and transport them to the correct deposit stations. Manage Radiation stacks as in the Activation encounter (pass between players or drop/pick up solo).",
+          "tips": [
+            "Fallen Captains spawn at various locations in the maze",
+            "Cores drop immediately upon Captain death",
+            "Manage Radiation stacks while carrying cores",
+            "Deposit cores at correct stations to progress",
+            "Stations are marked and visible",
+            "Multiple cores may be needed"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Core collection happens under time pressure from Raneiks Unified. Work quickly but manage Radiation carefully.",
+          "relatedMechanics": ["vespers-host-nuclear-core-management"]
+        }
+      ]
+    },
+    {
+      "id": "vespers-host-raneiks-unified",
+      "name": "Raneiks Unified",
+      "description": "The first boss encounter. Players must use Operator and Suppressor augments to identify marked Servitors and enter a code to initiate damage phases. The boss splits into 10 smaller Servitors when suppressed, and players must identify which two have red lights to gather a 4-digit code.",
+      "type": "boss",
+      "order": 3,
+      "mechanics": [
+        {
+          "id": "vespers-host-raneiks-operator-acquisition",
+          "name": "Operator Augment Acquisition (Raneiks)",
+          "description": "A Viral Carrier spawns at the start of the encounter carrying the Operator augment. Defeat it to obtain the augment needed for code entry.",
+          "type": "puzzle",
+          "solution": "Defeat the Viral Carrier that spawns when the encounter begins. Pick up the Operator augment (red icon).",
+          "tips": [
+            "Viral Carrier spawns immediately when encounter starts",
+            "Operator augment needed for code entry later",
+            "Manage augment timer at terminals if needed"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Quick acquisition important for time management.",
+          "relatedMechanics": ["vespers-host-raneiks-code-entry"]
+        },
+        {
+          "id": "vespers-host-raneiks-machine-priest",
+          "name": "Machine Priest Defeat",
+          "description": "A Machine Priest miniboss spawns in the encounter. Defeating it teleports players to another area where the Suppressor augment can be acquired.",
+          "type": "boss",
+          "solution": "Focus fire on the Machine Priest miniboss. Defeat it to trigger a teleport to the next area where Suppressor mechanics begin.",
+          "tips": [
+            "Machine Priest is a miniboss with significant health",
+            "Clear adds around it first for easier engagement",
+            "Defeat triggers teleportation to new area",
+            "Use heavy weapons and supers for efficient damage"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Efficient miniboss defeat saves time for code-solving phase.",
+          "relatedMechanics": ["vespers-host-raneiks-suppressor-acquisition"]
+        },
+        {
+          "id": "vespers-host-raneiks-suppressor-acquisition",
+          "name": "Suppressor Augment Acquisition",
+          "description": "After teleporting, Shanks spawn in the area, including one carrying the Suppressor augment. Defeat the Shank with the Suppressor augment to obtain it. The Suppressor augment replaces your grenade ability with a decoy bomb/hologram ability.",
+          "type": "puzzle",
+          "solution": "Defeat the Shanks that spawn after teleportation. One Shank carries the Suppressor augment (blue icon). Defeat it and pick up the augment. The Suppressor augment replaces your grenade with a hologram/decoy bomb ability.",
+          "tips": [
+            "Multiple Shanks spawn - identify the one with the augment",
+            "Suppressor augment is blue icon",
+            "Augment replaces grenade with decoy bomb ability",
+            "This ability is used to suppress Raneiks Unified",
+            "Manage augment timer at terminals"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Quick identification and acquisition important.",
+          "relatedMechanics": ["vespers-host-raneiks-suppression"]
+        },
+        {
+          "id": "vespers-host-raneiks-suppression",
+          "name": "Suppressing Raneiks Unified",
+          "description": "Use the Suppressor augment's decoy bomb ability near Raneiks Unified to cause the boss to split into 10 smaller Servitors. This must be done to identify marked Servitors for the code.",
+          "type": "boss",
+          "solution": "While holding the Suppressor augment, use your grenade ability (now a decoy bomb) near Raneiks Unified. The boss will split into 10 smaller Servitors that float in the area. This allows identification of marked Servitors.",
+          "tips": [
+            "Use Suppressor grenade ability near Raneiks Unified",
+            "Boss splits into 10 smaller Servitors",
+            "All Servitors share the same health bar",
+            "Suppression must be repeated for each code digit identification",
+            "Servitors remain split for a limited time"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Suppression timing is important. Do it efficiently to maximize time for identification.",
+          "relatedMechanics": ["vespers-host-raneiks-servitor-identification"]
+        },
+        {
+          "id": "vespers-host-raneiks-servitor-identification",
+          "name": "Marked Servitor Identification",
+          "description": "After Raneiks Unified splits into 10 Servitors, two of them will have red lights around their central eye. These are the marked Servitors. Each marked Servitor has a number in its name (e.g., Raneiks-2, Raneiks-7). Note these numbers - they form part of the 4-digit code.",
+          "type": "puzzle",
+          "solution": "After suppression, quickly scan all 10 Servitors. Two will have red lights glowing around their central eye. Read the numbers in their names (visible when aiming at them). Note both numbers. This process must be repeated twice to gather all 4 digits of the code.",
+          "tips": [
+            "Two Servitors have red lights around their eye",
+            "Red lights are clearly visible - scan quickly",
+            "Numbers are in the Servitor names (e.g., Raneiks-2, Raneiks-7)",
+            "Aim at Servitors to see their names clearly",
+            "Note both numbers from each suppression",
+            "Must suppress and identify twice to get all 4 digits",
+            "Write down or remember the numbers clearly"
+          ],
+          "difficulty": "hard",
+          "soloability": true,
+          "contestModeNotes": "Quick identification is critical. Servitors don't stay split long. Have a system for recording numbers (write them down or call them out clearly).",
+          "relatedMechanics": ["vespers-host-raneiks-suppression", "vespers-host-raneiks-code-entry"]
+        },
+        {
+          "id": "vespers-host-raneiks-code-entry",
+          "name": "Code Entry with Operator",
+          "description": "Once all 4 digits are identified, use the Operator augment to shoot the red panels corresponding to the identified numbers. Panels are numbered and located in the encounter area. Shooting the correct panels in sequence triggers the damage phase. Shooting a wrong panel results in instant death and resets the code.",
+          "type": "puzzle",
+          "solution": "With the Operator augment active, locate the numbered red panels in the encounter area. Shoot the panels corresponding to your 4-digit code in the correct order. If you shoot a wrong panel, you die instantly and must start the code process over. After shooting all 4 correct panels, the damage phase begins.",
+          "tips": [
+            "Panels are clearly numbered and visible",
+            "Shoot panels in the order of your 4-digit code",
+            "Wrong panel = instant death and code reset",
+            "Double-check numbers before shooting",
+            "In teams, have one person call out code, another shoots",
+            "Solo: Be absolutely certain of code before shooting",
+            "Code entry must be precise - no room for error"
+          ],
+          "difficulty": "expert",
+          "soloability": true,
+          "contestModeNotes": "Mistakes are extremely costly - wrong panel resets entire code process. Take extra time to verify code before shooting. This is a major time sink if mistakes are made.",
+          "relatedMechanics": ["vespers-host-raneiks-servitor-identification", "vespers-host-raneiks-damage-phase"]
+        },
+        {
+          "id": "vespers-host-raneiks-damage-phase",
+          "name": "Raneiks Unified Damage Phase",
+          "description": "After entering the correct code, Raneiks Unified becomes vulnerable. The boss must be suppressed again (using Suppressor augment) to make it fully vulnerable to damage. All 10 Servitors share one health bar. Focus fire to maximize damage. Encounter is limited to 3 damage phases maximum in contest mode.",
+          "type": "boss",
+          "solution": "After code entry, suppress Raneiks Unified again using the Suppressor augment's decoy bomb. The boss splits into Servitors and becomes vulnerable. Focus all damage on the Servitors - they share one health bar. Use heavy weapons, supers, and optimal DPS loadouts. The damage phase ends when Raneiks becomes immune again.",
+          "tips": [
+            "Suppress boss again before damaging",
+            "All Servitors share one health bar",
+            "Focus fire on Servitors for maximum damage",
+            "Use Well of Radiance or other damage buffs",
+            "Heavy weapons and supers are essential",
+            "Damage phase continues until boss becomes immune",
+            "Contest mode: Limited to 3 damage phases total"
+          ],
+          "difficulty": "hard",
+          "soloability": true,
+          "contestModeNotes": "Contest mode limits to 3 damage phases maximum. Maximize damage in each phase. If boss isn't defeated in 3 phases, encounter likely cannot be completed in time. Optimal DPS loadouts and coordination essential.",
+          "relatedMechanics": ["vespers-host-raneiks-code-entry", "vespers-host-raneiks-suppression"]
+        }
+      ]
+    },
+    {
+      "id": "vespers-host-corrupted-puppeteer",
+      "name": "The Corrupted Puppeteer (Atraks)",
+      "description": "The final boss encounter featuring Atraks (formerly Atraks-1 from Deep Stone Crypt). Players must manage invulnerable puppets with Radiation fields, use Scanner and Operator augments to identify and activate panels across multiple levels, deposit nuclear cores, and execute precise damage phases while avoiding lightning strikes.",
+      "type": "boss",
+      "order": 4,
+      "mechanics": [
+        {
+          "id": "vespers-host-puppeteer-puppet-management",
+          "name": "Puppet Spawn and Vulnerability",
+          "description": "The boss spawns invulnerable puppets (clones of Atraks) that have Radiation fields around them. Standing near puppets increases Radiation stacks. Puppets must be made vulnerable using the Suppressor augment's grenade ability, then eliminated quickly.",
+          "type": "add-clear",
+          "solution": "When puppets spawn, they are invulnerable and emit Radiation fields. Use the Suppressor augment's grenade ability (decoy bomb) near puppets to make them vulnerable. Once vulnerable, eliminate them quickly. Avoid standing near puppets to prevent Radiation stack buildup.",
+          "tips": [
+            "Puppets spawn throughout the encounter",
+            "Puppets are invulnerable until suppressed",
+            "Suppressor grenade makes them vulnerable",
+            "Eliminate vulnerable puppets quickly",
+            "Avoid standing near puppets - Radiation stacks build up",
+            "10 Radiation stacks = death",
+            "Puppets can overwhelm if not managed"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Puppet management is time-sensitive. Clear them efficiently to prevent Radiation buildup and reduce pressure.",
+          "relatedMechanics": ["vespers-host-puppeteer-augment-acquisition"]
+        },
+        {
+          "id": "vespers-host-puppeteer-augment-acquisition",
+          "name": "Scanner and Operator Augment Acquisition",
+          "description": "Defeat enemies throughout the encounter to acquire Scanner and Operator augments. These are needed to identify and activate numbered panels to progress through the encounter levels.",
+          "type": "puzzle",
+          "solution": "Defeat enemies (Viral Carriers, Shanks, etc.) that spawn carrying augments. Scanner augment (yellow) allows identification of active panels. Operator augment (red) allows shooting panels to activate them. Manage augment timers at terminals.",
+          "tips": [
+            "Viral Carriers and other enemies carry augments",
+            "Scanner = yellow icon, Operator = red icon",
+            "Both augments needed for panel mechanics",
+            "Deposit augments at terminals to reset timers",
+            "In teams, coordinate who gets which augment",
+            "Solo: Get Scanner first, identify panels, then get Operator"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Quick augment acquisition important for time management.",
+          "relatedMechanics": ["vespers-host-puppeteer-panel-identification", "vespers-host-puppeteer-panel-activation"]
+        },
+        {
+          "id": "vespers-host-puppeteer-panel-identification",
+          "name": "Active Panel Identification with Scanner",
+          "description": "Use the Scanner augment to identify which numbered panels are active in the current area. The Scanner modifies the minimap to show panels, and active panels will be marked or highlighted. Note which panel numbers are active.",
+          "type": "puzzle",
+          "solution": "While holding the Scanner augment, check the numbered panels in the area. The minimap or visual indicators will show which panels are active. Note the panel numbers that need to be activated. There are typically multiple active panels that must be identified.",
+          "tips": [
+            "Scanner shows active panels on minimap or visually",
+            "Note all active panel numbers clearly",
+            "Multiple panels may be active at once",
+            "Call out panel numbers to team if coordinating",
+            "Solo: Write down or remember active panel numbers"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Quick and accurate identification is important. Mistakes delay progress significantly.",
+          "relatedMechanics": ["vespers-host-puppeteer-panel-activation"]
+        },
+        {
+          "id": "vespers-host-puppeteer-panel-activation",
+          "name": "Panel Activation with Operator",
+          "description": "With the Operator augment, shoot the red panels corresponding to the numbers identified by the Scanner. Activating the correct panels opens doors leading to lower levels of the encounter. Wrong panels may result in penalties.",
+          "type": "puzzle",
+          "solution": "Using the Operator augment, shoot the red panels that match the numbers identified by the Scanner. Shoot them in the correct sequence if required. After activating all correct panels, doors will open allowing access to lower levels. Repeat this process in lower levels.",
+          "tips": [
+            "Shoot panels matching Scanner-identified numbers",
+            "Panels are red and clearly numbered",
+            "Activation opens doors to lower levels",
+            "Process must be repeated in lower levels",
+            "Wrong panels may cause penalties or reset",
+            "In teams: Scanner calls out, Operator shoots",
+            "Solo: Identify first, then get Operator and shoot"
+          ],
+          "difficulty": "hard",
+          "soloability": true,
+          "contestModeNotes": "Panel activation must be precise. Mistakes waste time and may reset progress.",
+          "relatedMechanics": ["vespers-host-puppeteer-panel-identification", "vespers-host-puppeteer-nuclear-core-deposit"]
+        },
+        {
+          "id": "vespers-host-puppeteer-nuclear-core-deposit",
+          "name": "Nuclear Core Deposit in Lower Levels",
+          "description": "In the lower levels, after activating panels, players must deposit nuclear cores. Defeat enemies to obtain cores, manage Radiation stacks, and deposit cores in designated bins. Depositing two cores in lower sections fully depletes Atraks's shield, enabling the damage phase.",
+          "type": "puzzle",
+          "solution": "After activating panels in lower levels, defeat enemies to obtain nuclear cores. Manage Radiation stacks (pass between players or drop/pick up solo). Deposit cores in the designated bins. After depositing two cores total in the lower sections, Atraks's shield is fully depleted, allowing access to the damage phase.",
+          "tips": [
+            "Cores spawn after panel activation in lower levels",
+            "Manage Radiation stacks carefully",
+            "Deposit cores in marked bins",
+            "Two cores total needed across lower sections",
+            "Shield depletion enables damage phase",
+            "Cores can be obtained from specific enemies or spawns"
+          ],
+          "difficulty": "medium",
+          "soloability": true,
+          "contestModeNotes": "Core deposit happens under time pressure. Efficient Radiation management is essential.",
+          "relatedMechanics": ["vespers-host-puppeteer-panel-activation", "vespers-host-puppeteer-damage-phase-transition"]
+        },
+        {
+          "id": "vespers-host-puppeteer-damage-phase-transition",
+          "name": "Transition to Damage Phase Arena",
+          "description": "After depositing two nuclear cores and depleting Atraks's shield, players must exit the bunker and navigate back to the main room using a teleporter. An elevator then launches players to the upper arena where Atraks awaits for the damage phase.",
+          "type": "traversal",
+          "solution": "After shield depletion, exit the lower bunker areas. Use the teleporter to return to the main room where the encounter began. Once all fireteam members are ready (or solo), step into the elevator. The elevator launches you to the upper arena where Atraks is located for the damage phase.",
+          "tips": [
+            "Teleporter returns you to main room",
+            "Elevator is clearly visible in main room",
+            "Step into elevator when ready",
+            "Elevator launches automatically",
+            "All players should be ready before launching",
+            "Upper arena is the damage phase location"
+          ],
+          "difficulty": "easy",
+          "soloability": true,
+          "contestModeNotes": "Quick transition saves time. Don't delay in elevator.",
+          "relatedMechanics": ["vespers-host-puppeteer-damage-phase"]
+        },
+        {
+          "id": "vespers-host-puppeteer-damage-phase",
+          "name": "Atraks Damage Phase",
+          "description": "Atraks occupies one of three floating platforms at the back of the upper arena. The arena is bombarded with lightning strikes from the Anomaly above, telegraphed by glowing yellow areas on the ground. Puppets spawn throughout the phase. Players must deal damage while constantly moving to avoid lightning and eliminate puppets. After 20-30 seconds, Atraks becomes immune and initiates a wipe mechanic.",
+          "type": "boss",
+          "solution": "Deal damage to Atraks while staying mobile. Watch for yellow glowing areas on the ground - these indicate incoming lightning strikes. Move away from yellow areas immediately. Eliminate puppets as they spawn. Use damage buffs (Well of Radiance, etc.) but stay mobile. Focus damage on Atraks. After 20-30 seconds, Atraks becomes immune - this triggers the wipe mechanic extension process.",
+          "tips": [
+            "Atraks is on one of three floating platforms at back of arena",
+            "Atraks may teleport between platforms during phase",
+            "Lightning strikes are telegraphed by yellow glowing ground",
+            "Stay mobile - never stand still",
+            "Move away from yellow areas immediately",
+            "Eliminate puppets quickly to reduce pressure",
+            "Well of Radiance can help but lightning can still kill",
+            "Damage phase lasts 20-30 seconds before immunity",
+            "Use optimal DPS loadouts",
+            "Contest mode: Limited to 3 damage phases maximum"
+          ],
+          "difficulty": "expert",
+          "soloability": true,
+          "contestModeNotes": "Contest mode limits to 3 damage phases. Maximize damage in each phase. Lightning strikes are deadly - constant movement is essential. Well placement on gas tank (front right) can help but isn't safe from all damage. Optimal DPS and survival balance is critical.",
+          "relatedMechanics": ["vespers-host-puppeteer-wipe-prevention"]
+        },
+        {
+          "id": "vespers-host-puppeteer-wipe-prevention",
+          "name": "Anomaly Communion Wipe Prevention",
+          "description": "After approximately 20-30 seconds of damage phase, Atraks becomes immune and initiates 'Anomaly Communion' - a wipe mechanic. To prevent the wipe and extend the damage phase, players must: (1) Identify and eliminate a glowing replicant/puppet of Atraks, (2) Retrieve the nuclear core it drops, (3) Deposit the core in a bunker on the back left side of the arena, (4) Ensure all fireteam members are inside the bunker before the Anomaly's attack hits.",
+          "type": "boss",
+          "solution": "When Atraks becomes immune and starts Anomaly Communion, quickly identify the glowing puppet/replicant (it will be visually distinct - glowing or marked). Eliminate it to obtain a nuclear core. Quickly transport the core to the bunker on the back left side of the arena (bin is inside). Deposit the core. Ensure all players are inside the bunker before the Anomaly's attack. Successfully depositing extends the damage phase by another 20 seconds. After Atraks becomes immune again, drop down the elevator shaft to restart the encounter cycle.",
+          "tips": [
+            "Glowing puppet is visually distinct - identify quickly",
+            "Eliminate glowing puppet to get nuclear core",
+            "Core must be deposited in back left bunker",
+            "Bunker has a bin inside for deposit",
+            "All players must be in bunker before Anomaly attack",
+            "Depositing extends damage phase by 20 seconds",
+            "After second immunity, drop down elevator shaft to restart",
+            "Process repeats until boss is defeated",
+            "Manage Radiation stacks while carrying core",
+            "Time is limited - work quickly but precisely"
+          ],
+          "difficulty": "expert",
+          "soloability": true,
+          "contestModeNotes": "Wipe prevention is time-critical. Quick identification of glowing puppet, efficient core transport, and timely bunker entry are essential. Mistakes result in wipe and reset. This mechanic extends damage phases, allowing more total damage if executed correctly. Contest mode: Must execute this perfectly to maximize damage phases within the 3-phase limit.",
+          "relatedMechanics": ["vespers-host-puppeteer-damage-phase", "vespers-host-nuclear-core-management"]
+        },
+        {
+          "id": "vespers-host-puppeteer-encounter-flow",
+          "name": "Overall Encounter Flow and Strategy",
+          "description": "The Corrupted Puppeteer encounter follows a repeating cycle: Acquire Scanner and Operator augments → Identify and activate numbered panels to access lower levels → Collect and deposit nuclear cores in lower bunker sections (2 cores total needed) → Deplete Atraks's shield → Return to main room via teleporter → Launch to upper arena via elevator → Damage phase on floating platforms (avoid lightning) → Wipe prevention when Atraks becomes immune (kill glowing puppet, deposit core in bunker) → Extend damage phase → Repeat cycle. The encounter requires managing augments, panels, nuclear cores with Radiation stacks, puppets with Radiation fields, and precise execution of all mechanics.",
+          "type": "boss",
+          "solution": "Phase 1 (Lower Bunker - Shield Break): Acquire Scanner and Operator augments by defeating enemies (Viral Carriers, Shanks). Use Scanner to identify active numbered panels. Use Operator to shoot correct panels, opening doors to lower levels. In lower levels, defeat enemies to obtain nuclear cores. Manage Radiation stacks (pass between players or drop/pick up solo). Deposit cores in designated bins in lower sections. After depositing 2 cores total, Atraks's shield is fully depleted. Phase 2 (Transition): Exit lower bunker, use teleporter to return to main room, step into elevator to launch to upper arena. Phase 3 (Damage Phase): Damage Atraks on floating platforms while staying mobile to avoid lightning strikes (yellow glowing ground areas). Kill puppets as they spawn. Phase 4 (Wipe Prevention/Extension): When Atraks becomes immune (~20-30 seconds), identify and kill glowing puppet to get nuclear core. Deposit core in back left bunker. All players enter bunker before Anomaly attack hits. This extends damage phase by 20 seconds. After second immunity, drop down elevator shaft to restart cycle. Repeat until boss defeated. Contest mode: Maximum 3 damage phases.",
+          "tips": [
+            "Cycle: Augments → Panels → Cores → Shield Break → Damage → Wipe Prevention → Repeat",
+            "Two cores total needed in lower sections to deplete shield",
+            "Manage Radiation stacks carefully when carrying cores",
+            "Stay mobile during damage phase - lightning is deadly",
+            "Wipe prevention extends damage phase - execute it perfectly",
+            "Contest mode: Limited to 3 damage phases maximum",
+            "Coordinate augment usage between players",
+            "Efficient execution of all phases is critical",
+            "Puppet management prevents Radiation buildup",
+            "Panel identification must be accurate to avoid penalties"
+          ],
+          "difficulty": "expert",
+          "soloability": true,
+          "contestModeNotes": "Contest mode requires perfect execution of the entire cycle. All mechanics must be executed efficiently. With only 3 damage phases maximum, every cycle matters. Panel mistakes waste time. Core deposit mistakes delay shield break. Wipe prevention mistakes cause full resets. Practice all phases extensively before contest mode attempts.",
+          "relatedMechanics": ["vespers-host-puppeteer-augment-acquisition", "vespers-host-puppeteer-panel-identification", "vespers-host-puppeteer-panel-activation", "vespers-host-puppeteer-nuclear-core-deposit", "vespers-host-puppeteer-damage-phase-transition", "vespers-host-puppeteer-damage-phase", "vespers-host-puppeteer-wipe-prevention"]
+        }
+      ]
+    }
+  ]
+}

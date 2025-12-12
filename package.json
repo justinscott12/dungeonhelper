@@ -6,12 +6,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ingest": "tsx scripts/ingest.ts",
+    "wipe": "tsx scripts/wipe.ts",
+    "reingest": "npm run wipe && npm run ingest",
+    "inspect": "tsx scripts/inspect.ts",
+    "inspect:wr": "tsx scripts/inspect.ts \"Warlord's Ruin\""
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
+    "@pinecone-database/pinecone": "^6.1.3",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
+    "lucide-react": "^0.559.0",
     "next": "16.0.8",
+    "next-themes": "^0.4.6",
+    "openai": "^6.10.0",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-dom": "19.2.1",
+    "react-markdown": "^10.1.0",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.4.0",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -21,6 +42,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.8",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "tw-animate-css": "^1.4.0",
     "typescript": "^5"
   }
 }

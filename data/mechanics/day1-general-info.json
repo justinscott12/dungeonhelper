@@ -1,0 +1,102 @@
+{
+  "id": "day1-general-info",
+  "name": "Day 1 Contest Mode - General Information",
+  "type": "dungeon",
+  "description": "General tips, information, and rules about Day 1 contest mode dungeons and raids. This information helps teams understand contest mode constraints and prepare for puzzle-solving during Day 1 attempts.",
+  "encounters": [
+    {
+      "id": "day1-general-tips",
+      "name": "General Day 1 Tips and Information",
+      "description": "Essential information about Day 1 contest mode, dungeon mechanics, and preparation strategies.",
+      "type": "encounter",
+      "order": 1,
+      "mechanics": [
+        {
+          "id": "day1-dungeon-mechanics-soloable",
+          "name": "Dungeon Mechanics Are Soloable",
+          "description": "In Day 1 dungeons, all mechanics are designed to be soloable. This means that any puzzle or mechanic can be completed by a single player, though coordination may still be helpful for speed and efficiency.",
+          "type": "other",
+          "solution": "When encountering a new mechanic, remember that it can be solved by one person. Don't assume you need multiple players to interact with puzzle elements. Test mechanics individually before coordinating team efforts.",
+          "tips": [
+            "All puzzle mechanics can be completed solo",
+            "Don't assume mechanics require multiple players",
+            "Test mechanics individually first",
+            "Coordination helps with speed but isn't required for completion"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": true,
+          "contestModeNotes": "This is a key difference from raids - dungeons are designed for solo play, so mechanics reflect that."
+        },
+        {
+          "id": "day1-contest-time-limits",
+          "name": "Contest Mode Time Limits",
+          "description": "On contest mode, encounters have strict time limits. Puzzle encounters are limited by time, and boss encounters are limited to 3 damage phases maximum. Teams must solve mechanics quickly and efficiently.",
+          "type": "other",
+          "solution": "Plan for time pressure. Have clear communication protocols. Assign roles quickly. Practice efficient execution. For boss encounters, maximize damage in each phase since you only get 3 attempts.",
+          "tips": [
+            "Puzzle encounters have time limits - work quickly",
+            "Boss encounters are limited to 3 damage phases",
+            "Maximize damage in each boss phase",
+            "Have clear, quick callouts",
+            "Assign roles immediately when entering encounters",
+            "Don't waste time on unnecessary coordination"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": true,
+          "contestModeNotes": "Time pressure is a major factor in contest mode. Teams that solve puzzles quickly have a significant advantage."
+        },
+        {
+          "id": "day1-star-wars-theme",
+          "name": "Star Wars Themed Expansion",
+          "description": "The upcoming expansion is Star Wars themed, though not directly featuring Star Wars characters. The theme includes lightsabers, Star Wars-like cutscenes, music, and visual aesthetics. Mechanics may reference Star Wars concepts, themes, or visual elements.",
+          "type": "other",
+          "solution": "When encountering new mechanics, consider Star Wars themes and references. Look for visual elements that might reference Star Wars (lightsabers, energy weapons, space themes, etc.). Mechanics might involve concepts like energy, force-like interactions, or space-themed puzzles.",
+          "tips": [
+            "Expect Star Wars-themed visual elements",
+            "Mechanics may reference Star Wars concepts",
+            "Look for lightsaber-like weapons or effects",
+            "Music and cutscenes will have Star Wars aesthetic",
+            "Don't expect direct character references (no Chewbacca, etc.)",
+            "Theme is more about aesthetics and feel than direct IP"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "day1-equilibrium-dungeon-info",
+          "name": "Equilibrium Dungeon Information",
+          "description": "The upcoming Day 1 dungeon is called Equilibrium. It is Cabal themed and is likely to feature at least 2 bosses. The dungeon trailer can be found at https://www.youtube.com/watch?v=uG0lbP_I7iY",
+          "type": "other",
+          "solution": "Prepare for Cabal-themed mechanics. Expect multiple boss encounters (at least 2). Review the trailer for visual clues about mechanics, aesthetics, and potential puzzle elements. Study previous Cabal encounters for reference.",
+          "tips": [
+            "Dungeon name: Equilibrium",
+            "Theme: Cabal",
+            "Expected bosses: At least 2",
+            "Watch the trailer for visual clues: https://www.youtube.com/watch?v=uG0lbP_I7iY",
+            "Review previous Cabal encounters for reference",
+            "Expect Cabal-specific mechanics (shields, phalanxes, etc.)"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": true
+        },
+        {
+          "id": "day1-previous-contest-dungeons",
+          "name": "Previous Contest Dungeons Reference",
+          "description": "There are two previous contest dungeons that can serve as reference: Vesper's Host and Sundered Doctrine. These dungeons provide examples of contest mode dungeon mechanics, time constraints, and puzzle-solving approaches.",
+          "type": "other",
+          "solution": "Study mechanics from Vesper's Host and Sundered Doctrine to understand patterns in contest dungeon design. Look for common mechanic types, time pressure patterns, and solo-solvable puzzle structures.",
+          "tips": [
+            "Previous contest dungeons: Vesper's Host and Sundered Doctrine",
+            "Use these as reference for contest mode patterns",
+            "Study their mechanics for common design patterns",
+            "Note how time limits were implemented",
+            "Look for solo-solvable mechanic patterns"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": true,
+          "relatedMechanics": []
+        }
+      ]
+    }
+  ]
+}

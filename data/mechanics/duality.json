@@ -1,0 +1,731 @@
+{
+  "id": "duality",
+  "name": "Duality",
+  "type": "dungeon",
+  "description": "A Nightmare-themed dungeon set within the depths of Calus's Leviathan ship. Players navigate between the real Leviathan and the Nightmare Realm, manipulating bells to shift between realities. The dungeon features unique mechanics involving Standard Bearers, bell mechanics, nightmare containment, and multi-reality puzzle solving. Players must master the bell system, symbol matching, and precision timing to overcome the challenges while managing enemies across two realities.",
+  "encounters": [
+    {
+      "id": "duality-opening",
+      "name": "Opening Encounter - Navigation to First Encounter",
+      "description": "The opening section where players navigate the Leviathan and enter the dungeon proper. Players learn basic bell mechanics and encounter Standard Bearers for the first time. This serves as a tutorial for the core dungeon mechanics.",
+      "type": "traversal",
+      "order": 1,
+      "mechanics": [
+        {
+          "id": "opening-bell-mechanics-intro",
+          "name": "Introduction to Bell Mechanics",
+          "description": "Bells are scattered throughout the dungeon and serve as the primary mechanism for shifting between the real Leviathan and the Nightmare Realm. Players must understand that bells can be activated to create portals between realities, and that certain mechanics only function in specific realities.",
+          "type": "puzzle",
+          "solution": "Approach bells and interact with them to shift between realities. The bell rings and creates a visual effect indicating the reality shift. Players will notice environmental changes when shifting - the Nightmare Realm has a darker, more corrupted appearance compared to the real Leviathan. Use bells to navigate between areas that may be blocked in one reality but accessible in the other.",
+          "tips": [
+            "Bells shift players between real Leviathan and Nightmare Realm",
+            "Visual differences help identify which reality you're in",
+            "Some paths only exist in one reality",
+            "Bells can be activated from either side to shift",
+            "Listen for audio cues when bells activate",
+            "Coordinate bell usage with teammates",
+            "Shift back and forth as needed to progress"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "opening-standard-bearer-intro",
+          "name": "Standard Bearer Introduction",
+          "description": "Standard Bearers are Cabal enemies that carry Standards (flags). These enemies are central to dungeon mechanics. When defeated, they drop Standards that players can pick up. Standards are used to activate and interact with various dungeon mechanics, particularly in the Nightmare Realm.",
+          "type": "add-clear",
+          "solution": "Engage Standard Bearers when encountered. They are typically more durable than regular Cabal. When defeated, they drop their Standard (visible as a flag item). Pick up the Standard by walking over it. Standards are used for activating bells and other mechanics throughout the dungeon. Carry Standards carefully as they may have a duration or be dropped on death.",
+          "tips": [
+            "Standard Bearers are priority targets",
+            "They drop Standards when defeated",
+            "Pick up Standards by walking over them",
+            "Standards are required for bell activation",
+            "Multiple Standard Bearers may spawn",
+            "Clear adds around Standard Bearers first",
+            "Standards may be dropped if player dies"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "opening-reality-navigation",
+          "name": "Basic Reality Navigation",
+          "description": "Players must learn to navigate between the real Leviathan and Nightmare Realm using bells. Some areas are only accessible in one reality or the other. Paths, platforms, and doorways may appear or disappear depending on which reality players are in.",
+          "type": "traversal",
+          "solution": "Use bells to shift between realities when you encounter blocked paths. If a door or path is blocked in the real Leviathan, shift to the Nightmare Realm and check if it's accessible there (or vice versa). Look for visual indicators showing which reality has the correct path. Some areas require shifting back and forth multiple times to progress through different sections.",
+          "tips": [
+            "If blocked in one reality, try the other",
+            "Some paths only exist in Nightmare Realm",
+            "Some paths only exist in real Leviathan",
+            "Shift frequently to explore both realities",
+            "Use visual differences to identify reality",
+            "Coordinate shifts with teammates",
+            "Don't get separated across realities"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        }
+      ]
+    },
+    {
+      "id": "duality-first-encounter",
+      "name": "Gahlran's Sorrow",
+      "description": "The first major encounter featuring Gahlran's Nightmare. Players must collect Standards, activate bells to shift realities, match symbols between realms, and defeat Standard Bearers in both realities. This encounter introduces the core bell mechanics, symbol matching system, and multi-reality coordination required throughout the dungeon.",
+      "type": "boss",
+      "order": 2,
+      "mechanics": [
+        {
+          "id": "gahlran-standard-bearer-spawns",
+          "name": "Standard Bearer Spawns and Standard Collection",
+          "description": "At the start of the encounter, Standard Bearers spawn in the arena. Players must defeat these Standard Bearers to collect their Standards. Standards are required to activate bells and shift between realities. Standard Bearers spawn in waves throughout the encounter, requiring continuous management.",
+          "type": "add-clear",
+          "solution": "Engage and defeat Standard Bearers as they spawn. They appear in both the real Leviathan and Nightmare Realm. When defeated, they drop Standards that must be collected by walking over them. Collect Standards quickly and coordinate who picks them up. Players need Standards to activate bells later. Multiple Standard Bearers spawn per wave, so clear them efficiently while managing other adds.",
+          "tips": [
+            "Standard Bearers spawn throughout the encounter",
+            "Defeat them to collect Standards",
+            "Standards drop at their death location",
+            "Walk over Standards to pick them up",
+            "Multiple players can collect Standards",
+            "Prioritize Standard Bearers over regular adds",
+            "Standards are essential for bell activation",
+            "Standard Bearers spawn in both realities"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "gahlran-symbol-display",
+          "name": "Symbol Display System",
+          "description": "Symbols appear in both the real Leviathan and Nightmare Realm during the encounter. These symbols are displayed on large panels or structures visible in the arena. The symbols in each reality correspond to each other - matching symbols between realities is key to progressing the encounter. Symbols include various icons that players must identify and match.",
+          "type": "puzzle",
+          "solution": "Observe the symbols displayed in both realities. Symbols appear on panels or structures around the arena. Each symbol in the real Leviathan has a corresponding symbol in the Nightmare Realm. Players must identify which symbols match between the two realities. Typically, players will see symbols in one reality and must find the matching symbols in the other reality. Communicate symbol locations clearly with teammates.",
+          "tips": [
+            "Symbols appear in both realities",
+            "Each symbol has a match in the other reality",
+            "Symbols are displayed on panels/structures",
+            "Take time to identify all visible symbols",
+            "Call out symbol locations clearly",
+            "Some symbols may be at different elevations",
+            "Symbol identification requires viewing both realities",
+            "Use clear callouts for symbol communication"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "gahlran-bell-activation-standard",
+          "name": "Bell Activation with Standards",
+          "description": "Bells scattered around the arena can be activated by players carrying Standards. When activated, bells create portals that allow players to shift between the real Leviathan and Nightmare Realm. Each bell activation requires a Standard. Players must strategically activate bells to shift between realities for symbol matching and mechanics execution.",
+          "type": "puzzle",
+          "solution": "Collect Standards from defeated Standard Bearers. Approach a bell while carrying a Standard and interact with it to activate. The bell rings and creates a portal effect, shifting players between realities. Use bell activations strategically - activate bells near symbols that need to be matched, or to shift to the reality where Standard Bearers need to be defeated. Each activation consumes one Standard, so collect multiple Standards before activating multiple bells.",
+          "tips": [
+            "Must carry Standard to activate bells",
+            "Interact with bell while holding Standard",
+            "Each activation consumes one Standard",
+            "Bells shift all nearby players between realities",
+            "Activate bells strategically near mechanics",
+            "Collect multiple Standards before activating",
+            "Coordinate bell activations with teammates",
+            "Audio/visual cues indicate bell activation"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "gahlran-symbol-matching",
+          "name": "Symbol Matching Between Realities",
+          "description": "The core mechanic requires players to match symbols between the real Leviathan and Nightmare Realm. Players must identify matching symbols in both realities and interact with them in the correct order. Typically, players need to match a sequence of symbols by activating them in both realities. Matching symbols correctly progresses the encounter toward the damage phase.",
+          "type": "puzzle",
+          "solution": "Identify symbols displayed in one reality (e.g., real Leviathan). Find the matching symbols in the other reality (Nightmare Realm). Players must activate or interact with matching symbols in sequence. This typically requires: (1) View symbols in one reality, (2) Shift to other reality using bell, (3) Locate matching symbols, (4) Interact with symbols in correct order, (5) Repeat for additional symbol pairs. Complete the full sequence to progress.",
+          "tips": [
+            "Match symbols between realities",
+            "Identify symbols in one reality first",
+            "Shift to other reality to find matches",
+            "Activate symbols in correct sequence",
+            "Multiple symbol pairs must be matched",
+            "Coordinate across realities with teammates",
+            "Clear communication essential for matching",
+            "Verify symbol activation visually"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "gahlran-nightmare-containement",
+          "name": "Nightmare Containment",
+          "description": "During the encounter, Nightmare energy builds up and must be contained. Players may need to interact with containment nodes or defeat enemies in specific locations to prevent Nightmare buildup from causing wipe mechanics. Containment is managed through symbol matching and Standard Bearer defeats.",
+          "type": "other",
+          "solution": "Progress symbol matching and defeat Standard Bearers to contain Nightmare energy. The symbol matching mechanic directly ties into containment - correctly matching symbols reduces Nightmare buildup. If Nightmare containment fails (symbols not matched in time or Standard Bearers not defeated), players may face increased difficulty or wipe mechanics. Work efficiently through symbol matching to maintain containment.",
+          "tips": [
+            "Symbol matching reduces Nightmare buildup",
+            "Defeating Standard Bearers helps containment",
+            "Work efficiently to prevent buildup",
+            "Failure to contain may cause wipes",
+            "Containment status may have visual indicators",
+            "Time limits may apply for containment",
+            "Coordinate to maintain containment quickly"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, Nightmare containment timers are stricter. Failure to match symbols or defeat Standard Bearers quickly enough may result in wipes."
+        },
+        {
+          "id": "gahlran-damage-phase",
+          "name": "Gahlran Damage Phase",
+          "description": "After successfully matching all required symbols, a damage phase begins. Gahlran's Nightmare becomes vulnerable to damage. Players must maximize damage output during this window. The damage phase continues until Gahlran becomes immune again, and players must balance dealing damage with managing adds that continue to spawn.",
+          "type": "boss",
+          "solution": "Once all symbols are matched, Gahlran becomes vulnerable. Immediately position for damage and begin attacking. Use damage supers, heavy weapons, and coordinate buffs (Well of Radiance, Weapons of Light). Clear adds that spawn during damage phase to maintain safe positioning. Maximize damage output. The damage phase ends when Gahlran becomes immune again. After damage phase ends, repeat the symbol matching process for subsequent phases.",
+          "tips": [
+            "Damage phase begins after symbol matching completes",
+            "Gahlran becomes vulnerable to all damage",
+            "Damage phase continues until boss becomes immune",
+            "Position safely while dealing damage",
+            "Clear adds during damage phase",
+            "Coordinate damage buffs and debuffs",
+            "Use optimal damage loadouts",
+            "Maximize damage in each phase"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, damage phases may be limited (typically 3 phases maximum). Maximize damage each phase - failed or low-damage phases may prevent completion."
+        },
+        {
+          "id": "gahlran-add-management",
+          "name": "Add Management Throughout Encounter",
+          "description": "The encounter features continuous add spawns including Cabal Legionnaires, Phalanxes, Psions, and Standard Bearers. Players must balance add clear with mechanic execution. Adds spawn in both realities, requiring coordination across realms.",
+          "type": "add-clear",
+          "solution": "Maintain continuous add clear while executing mechanics. Prioritize Standard Bearers for Standard collection, but clear regular adds to maintain arena control. Use area-of-effect abilities and weapons for efficient add clear. Assign some players to focus on adds while others handle symbol matching. Adds spawn in both realities, so coordinate clear across realms.",
+          "tips": [
+            "Continuous add spawns throughout encounter",
+            "Prioritize Standard Bearers over regular adds",
+            "Use AOE abilities for add clear efficiency",
+            "Balance add clear with mechanics",
+            "Assign roles: some focus adds, others mechanics",
+            "Adds spawn in both realities",
+            "Maintain arena control at all times"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, adds are more aggressive and spawn more frequently. Efficient add clear is essential to maintain mechanic execution pace."
+        },
+        {
+          "id": "gahlran-encounter-progression",
+          "name": "Overall Encounter Flow",
+          "description": "The encounter follows a repeating cycle: defeat Standard Bearers → collect Standards → observe symbols → activate bells to shift realities → match symbols between realities → complete containment → damage phase → repeat. Players must coordinate across realities and efficiently execute each phase.",
+          "type": "boss",
+          "solution": "Phase 1: Defeat Standard Bearers and collect Standards. Phase 2: Observe symbols displayed in both realities. Phase 3: Activate bells with Standards to shift between realities as needed. Phase 4: Match symbols by interacting with them in sequence across both realities. Phase 5: Maintain Nightmare containment. Phase 6: Damage phase when all symbols matched. Phase 7: Repeat cycle until Gahlran is defeated. Assign roles: some players handle symbol identification, others manage bell activations, others focus on add clear.",
+          "tips": [
+            "Cycle: Standards → Bells → Symbols → Damage → Repeat",
+            "Coordinate across realities constantly",
+            "Clear communication essential",
+            "Work efficiently to maintain containment",
+            "Assign specific roles to players",
+            "Practice symbol callouts",
+            "Master bell activation timing",
+            "Balance all mechanics simultaneously"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "Contest mode requires perfect execution. One mistake in symbol matching or containment failure can wipe the team. Practice and clear communication are critical."
+        }
+      ]
+    },
+    {
+      "id": "duality-traversal-vault",
+      "name": "Vault Traversal",
+      "description": "A traversal section between encounters featuring platforming challenges, bell mechanics for reality shifting, and navigation puzzles. Players must use bells strategically to access different areas of the vault, solving navigation puzzles that require shifting between realities to progress.",
+      "type": "traversal",
+      "order": 3,
+      "mechanics": [
+        {
+          "id": "vault-platforming-bells",
+          "name": "Platforming with Bell Mechanics",
+          "description": "The vault section features platforming challenges where players must use bells to shift between realities to access different platforms. Some platforms only exist in one reality or the other, requiring strategic bell usage to navigate. Players must time bell activations while platforming to reach new areas.",
+          "type": "traversal",
+          "solution": "Navigate the vault using platforms and bells. When you reach a gap or blocked path, look for bells nearby. Activate bells to shift realities - the platform layout may change, revealing new paths or platforms. Some sections require shifting mid-jump or while on specific platforms. Practice bell activation timing to navigate efficiently. Shift back and forth as needed to progress through different platform sections.",
+          "tips": [
+            "Use bells to shift realities during platforming",
+            "Platform layouts differ between realities",
+            "Some platforms only exist in one reality",
+            "Time bell activations carefully",
+            "Shift mid-traversal if needed",
+            "Look for bells near platform gaps",
+            "Coordinate shifts with teammates",
+            "Practice timing for smooth navigation"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "vault-navigation-puzzles",
+          "name": "Reality-Based Navigation Puzzles",
+          "description": "The vault contains navigation puzzles where players must determine which reality has the correct path forward. Doors, bridges, and platforms may be blocked or accessible depending on the current reality. Players must experiment with reality shifts to find the correct route.",
+          "type": "traversal",
+          "solution": "When encountering a blocked path, shift to the other reality using a bell and check if the path is accessible there. Some sections require shifting multiple times - a path may be blocked in both realities initially, but shifting at a specific location reveals the way forward. Explore both realities systematically. Look for visual indicators (like glowing paths or open doorways) that suggest which reality has the correct route.",
+          "tips": [
+            "If path blocked, try shifting realities",
+            "Some paths require multiple shifts",
+            "Look for visual indicators of correct paths",
+            "Explore both realities systematically",
+            "Some doors only open in one reality",
+            "Coordinate exploration with teammates",
+            "Shift frequently to test both options"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "vault-add-clear",
+          "name": "Add Clear During Traversal",
+          "description": "Enemies spawn throughout the vault traversal section. Players must clear adds while navigating and solving puzzles. Standard Bearers may spawn, providing opportunities to collect Standards for future use. Add clear is necessary to maintain safe navigation.",
+          "type": "add-clear",
+          "solution": "Clear enemies as you navigate the vault. Standard Bearers may spawn - defeat them and collect Standards if needed for future mechanics (though Standards may not be required for vault navigation itself). Prioritize clearing enemies that block your path or are positioned near bells you need to activate. Use efficient weapons and abilities for quick add clear while maintaining forward progress.",
+          "tips": [
+            "Clear adds during traversal",
+            "Standard Bearers may spawn - collect Standards",
+            "Clear enemies blocking bells or paths",
+            "Don't let adds overwhelm during navigation",
+            "Use efficient add clear methods",
+            "Balance clearing with forward progress"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        }
+      ]
+    },
+    {
+      "id": "duality-second-encounter",
+      "name": "The Vault",
+      "description": "The second major encounter featuring a complex vault puzzle. Players must collect Standards, activate bells, match symbols between realities, and solve a vault lock mechanism. This encounter requires precise coordination and symbol matching across realities to unlock the vault and progress.",
+      "type": "encounter",
+      "order": 4,
+      "mechanics": [
+        {
+          "id": "vault-encounter-standard-collection",
+          "name": "Standard Collection for Vault Mechanics",
+          "description": "Standard Bearers spawn during the vault encounter. Players must defeat them to collect Standards. These Standards are required to activate bells and potentially interact with vault lock mechanisms. Standard collection is essential for progressing the encounter.",
+          "type": "add-clear",
+          "solution": "Defeat Standard Bearers as they spawn and collect their dropped Standards. Multiple Standard Bearers spawn per wave. Collect Standards quickly and coordinate distribution among team members. Standards are needed for bell activations throughout the encounter. Maintain Standard collection throughout the encounter as new Standard Bearers spawn.",
+          "tips": [
+            "Defeat Standard Bearers to collect Standards",
+            "Collect Standards immediately after drop",
+            "Distribute Standards among team members",
+            "Standards needed for bell activation",
+            "Multiple Standard Bearers spawn per wave",
+            "Maintain Standard collection throughout encounter"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "vault-encounter-symbol-display",
+          "name": "Symbol Display in Vault",
+          "description": "Symbols are displayed on panels or structures within the vault area. These symbols appear in both the real Leviathan and Nightmare Realm. Players must observe and identify symbols in both realities to solve the vault lock puzzle. Symbols may be displayed on vault doors, walls, or special panels.",
+          "type": "puzzle",
+          "solution": "Observe all symbol displays in both realities. Symbols appear on vault structures and may be visible from different angles. Take time to identify all symbols clearly. Some symbols may only be visible from specific locations or angles. Communicate symbol locations and identities clearly with teammates. Symbols are used for the vault lock mechanism.",
+          "tips": [
+            "Symbols displayed on vault structures",
+            "Observe symbols in both realities",
+            "Some symbols require specific viewing angles",
+            "Identify all symbols clearly before proceeding",
+            "Clear communication of symbol locations",
+            "Symbols used for vault lock puzzle"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "vault-encounter-lock-mechanism",
+          "name": "Vault Lock Mechanism",
+          "description": "The vault features a lock mechanism that must be solved to progress. This mechanism requires players to match symbols or input symbol sequences correctly. The lock may require symbols to be activated in a specific order or pattern, involving both realities.",
+          "type": "puzzle",
+          "solution": "Identify the required symbol sequence or pattern for the vault lock. This may involve matching symbols between realities, activating symbols in a specific order, or inputting a symbol code. Use bell activations to shift between realities as needed to access and activate required symbols. Complete the symbol sequence correctly to unlock the vault. If incorrect, the lock may reset and require starting over.",
+          "tips": [
+            "Vault lock requires symbol matching/sequencing",
+            "Identify correct symbol sequence",
+            "Activate symbols in correct order",
+            "Use bells to access symbols in both realities",
+            "Incorrect input may reset the lock",
+            "Verify symbol sequence before finalizing",
+            "Coordinate symbol activation across realities"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, incorrect vault lock inputs may have severe penalties or reset timers. Precision is critical."
+        },
+        {
+          "id": "vault-encounter-bell-coordination",
+          "name": "Bell Coordination for Vault Puzzle",
+          "description": "Players must coordinate bell activations to shift between realities while solving the vault lock. Different symbols or lock mechanisms may be accessible in different realities. Strategic bell usage is required to access all necessary symbols and complete the vault puzzle.",
+          "type": "puzzle",
+          "solution": "Coordinate bell activations with symbol identification and vault lock solving. Activate bells to shift realities when you need to access symbols or mechanisms in the other reality. Some symbols may only be visible or interactable in one reality. Plan bell activations to minimize unnecessary shifts while ensuring access to all required mechanics. Communicate bell activation timing with teammates working on symbol identification.",
+          "tips": [
+            "Coordinate bell activations strategically",
+            "Shift realities to access required symbols",
+            "Some mechanisms only work in specific realities",
+            "Minimize unnecessary reality shifts",
+            "Communicate bell activation timing",
+            "Plan shifts based on symbol locations"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "vault-encounter-progression",
+          "name": "Vault Encounter Progression",
+          "description": "The encounter progresses through phases: collect Standards → observe symbols → activate bells → solve vault lock → repeat if needed. Successfully solving the vault lock opens the vault and allows progression to the next area. The encounter may require multiple lock-solving cycles.",
+          "type": "other",
+          "solution": "Phase 1: Defeat Standard Bearers and collect Standards. Phase 2: Observe symbols displayed in both realities. Phase 3: Activate bells with Standards to shift realities as needed. Phase 4: Identify correct symbol sequence for vault lock. Phase 5: Activate symbols in correct order to unlock vault. Phase 6: Repeat if vault requires multiple unlock cycles. Phase 7: Proceed through unlocked vault. Assign roles for symbol identification, bell activation, and add clear.",
+          "tips": [
+            "Cycle: Standards → Symbols → Bells → Lock → Repeat",
+            "Vault may require multiple unlock cycles",
+            "Coordinate all mechanics simultaneously",
+            "Clear communication essential",
+            "Assign specific roles to players",
+            "Verify symbol sequences before activating",
+            "Work efficiently to complete unlocks"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "Contest mode requires perfect execution. Incorrect vault lock inputs waste time and may have penalties. Team coordination is critical."
+        },
+        {
+          "id": "vault-encounter-add-management",
+          "name": "Add Management in Vault",
+          "description": "Enemies spawn throughout the vault encounter, including Cabal adds and Standard Bearers. Players must maintain add clear while solving vault puzzles. Adds can interfere with symbol observation and bell activation if not managed.",
+          "type": "add-clear",
+          "solution": "Maintain continuous add clear while solving vault mechanics. Prioritize Standard Bearers for Standard collection. Clear adds that are blocking bells or symbol viewing areas. Assign some players to focus on add clear while others handle puzzle mechanics. Use efficient add clear methods to maintain arena control.",
+          "tips": [
+            "Continuous add spawns during encounter",
+            "Prioritize Standard Bearers",
+            "Clear adds blocking mechanics",
+            "Balance add clear with puzzle solving",
+            "Assign roles: some focus adds, others puzzles",
+            "Maintain arena control throughout"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, adds are more aggressive. Efficient add clear is necessary to maintain puzzle-solving pace."
+        }
+      ]
+    },
+    {
+      "id": "duality-traversal-caiatl",
+      "name": "Traversal to Caiatl",
+      "description": "Final traversal section leading to the final boss encounter. Features platforming, bell mechanics, and navigation challenges. Players prepare for the final encounter by mastering bell timing and reality shifting.",
+      "type": "traversal",
+      "order": 5,
+      "mechanics": [
+        {
+          "id": "caiatl-traversal-advanced-platforming",
+          "name": "Advanced Platforming Challenges",
+          "description": "The final traversal section features more complex platforming that requires precise bell timing and reality shifting. Players must navigate challenging jumps while coordinating bell activations to access platforms in different realities.",
+          "type": "traversal",
+          "solution": "Navigate through platforming sections, using bells strategically to shift realities and access different platform layouts. Some jumps require shifting mid-air or on specific platforms. Practice timing for bell activations during platforming. Coordinate with teammates to ensure all players progress together. Take time to observe platform layouts in both realities before attempting complex jumps.",
+          "tips": [
+            "Complex platforming with bell mechanics",
+            "May require shifting mid-jump",
+            "Observe platform layouts in both realities",
+            "Practice bell activation timing",
+            "Coordinate shifts with teammates",
+            "Take time to plan jumps",
+            "Some sections require precise timing"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "caiatl-traversal-final-preparation",
+          "name": "Final Encounter Preparation",
+          "description": "This traversal section serves as final preparation for the Caiatl encounter. Players should ensure they understand bell mechanics, have appropriate loadouts, and are ready for the most challenging encounter in the dungeon.",
+          "type": "traversal",
+          "solution": "Use this section to finalize loadouts and strategies for the Caiatl encounter. Ensure all players understand bell mechanics and reality shifting. Coordinate team roles and communication protocols. Clear any remaining adds. Proceed to the final encounter arena when ready.",
+          "tips": [
+            "Finalize loadouts for Caiatl",
+            "Ensure understanding of bell mechanics",
+            "Coordinate team roles",
+            "Establish communication protocols",
+            "Clear remaining adds",
+            "Prepare for most challenging encounter"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        }
+      ]
+    },
+    {
+      "id": "duality-final-boss",
+      "name": "Caiatl, Empress of the Cabal",
+      "description": "The final boss encounter featuring Caiatl, Empress of the Cabal. This is the most complex encounter, requiring precise bell mechanics, symbol matching across realities, Nightmare containment, and timed damage phases. Players must master all dungeon mechanics while dealing with Caiatl's attacks and managing enemies across two realities. The encounter features unique mechanics including bell timing for damage phases, symbol matching under pressure, and Nightmare containment management.",
+      "type": "boss",
+      "order": 6,
+      "mechanics": [
+        {
+          "id": "caiatl-standard-bearer-management",
+          "name": "Continuous Standard Bearer Management",
+          "description": "Standard Bearers spawn continuously throughout the Caiatl encounter. Players must defeat them to collect Standards, which are essential for bell activation. Standard management is critical - players need Standards available when damage phases begin to activate bells for damage. Standard Bearers spawn in both realities, requiring coordination across realms.",
+          "type": "add-clear",
+          "solution": "Continuously defeat Standard Bearers as they spawn and collect their Standards. Maintain a supply of Standards for bell activations during damage phases. Standard Bearers spawn in both realities, so coordinate defeat across realms. Have multiple players carry Standards to ensure availability when needed. Prioritize Standard Bearers over regular adds, but maintain add clear balance.",
+          "tips": [
+            "Standard Bearers spawn continuously",
+            "Collect Standards immediately after defeat",
+            "Maintain Standard supply for damage phases",
+            "Standards needed for bell activation during damage",
+            "Multiple players should carry Standards",
+            "Standard Bearers spawn in both realities",
+            "Prioritize Standard Bearers over regular adds",
+            "Coordinate Standard collection across realities"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "caiatl-symbol-display-pressure",
+          "name": "Symbol Display Under Pressure",
+          "description": "Symbols appear on structures around the Caiatl arena in both realities. Players must identify and match these symbols while under pressure from Caiatl's attacks, add spawns, and time constraints. Symbols may appear on banners, structures, or panels visible from the arena. Clear identification and communication are critical.",
+          "type": "puzzle",
+          "solution": "Observe symbols displayed in both realities while managing combat. Symbols appear on visible structures - take time to identify them clearly despite combat pressure. Communicate symbol locations and identities clearly with teammates. Some symbols may only be visible from specific positions or angles. Use brief safe moments during add clear to identify symbols. Split responsibilities: some players focus on symbols while others handle adds.",
+          "tips": [
+            "Symbols visible in both realities",
+            "Identify symbols despite combat pressure",
+            "Clear communication of symbol locations",
+            "Some symbols require specific viewing angles",
+            "Use safe moments to identify symbols",
+            "Split roles: some identify symbols, others clear adds",
+            "Take time for accurate identification",
+            "Verify symbols before proceeding"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, time pressure is intense. Accurate symbol identification on first attempt is critical - mistakes waste precious time."
+        },
+        {
+          "id": "caiatl-bell-damage-phase",
+          "name": "Bell Activation for Damage Phases",
+          "description": "Damage phases are initiated by activating bells with Standards at specific times. The bell mechanics for damage phases are unique - players must ring bells in a coordinated sequence to shift Caiatl and players into the Nightmare Realm for damage. Incorrect bell timing or missing bells prevents damage phases or causes failures. This is the most critical mechanic - precise bell timing is essential.",
+          "type": "boss",
+          "solution": "When symbols are matched and containment is ready, prepare for damage phase. Players carrying Standards must activate bells in a coordinated sequence. Typically, three bells need to be activated simultaneously or in quick succession. All players must be positioned correctly before bell activation. Activate bells at the same time (or in required sequence) to shift into Nightmare Realm for damage phase. Missing a bell activation or incorrect timing causes the damage phase to fail. Practice timing and coordination - this is the most precise mechanic in the encounter.",
+          "tips": [
+            "Damage phases require coordinated bell activation",
+            "Typically 3 bells must be activated simultaneously",
+            "All players must be positioned correctly",
+            "Use Standards to activate bells",
+            "Precise timing is absolutely critical",
+            "Missing one bell activation fails the damage phase",
+            "Practice bell timing coordination",
+            "Clear countdown before activation",
+            "Visual/audio cues help with timing",
+            "This is the most precise mechanic - master it"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, bell timing must be perfect. One mistimed bell activation fails the entire damage phase. This mechanic alone can end runs if not executed perfectly. Practice and coordination are absolutely essential."
+        },
+        {
+          "id": "caiatl-nightmare-realm-damage",
+          "name": "Damage Phase in Nightmare Realm",
+          "description": "After successful bell activation, players and Caiatl shift to the Nightmare Realm for the damage phase. Caiatl becomes vulnerable to damage. Players must maximize damage output while managing any adds that spawn. The damage window continues until Caiatl becomes immune again, and players must balance damage with survival. Environmental hazards may be present in the Nightmare Realm.",
+          "type": "boss",
+          "solution": "Once shifted to Nightmare Realm after bell activation, immediately position for damage. Caiatl becomes vulnerable - begin dealing damage immediately. Use damage supers, heavy weapons, and coordinate buffs (Well of Radiance, Weapons of Light, Empowering Rift). Apply debuffs (Tractor Cannon, Tether, Divinity). Clear any adds that spawn during damage phase to maintain safe positioning. Maximize damage output. The damage phase ends when Caiatl becomes immune again, returning players to the real Leviathan.",
+          "tips": [
+            "Damage phase occurs in Nightmare Realm",
+            "Caiatl becomes vulnerable immediately after shift",
+            "Damage phase continues until boss becomes immune",
+            "Position quickly and begin damage",
+            "Coordinate damage buffs and debuffs",
+            "Clear adds during damage phase",
+            "Use optimal damage loadouts",
+            "Maximize damage in each phase",
+            "Environmental hazards may be present",
+            "Damage phase ends when Caiatl becomes immune"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, damage phases are limited (typically 3-4 maximum). Maximize damage each phase - failed or low-damage phases may prevent completion. Bell activation failures waste damage phase opportunities."
+        },
+        {
+          "id": "caiatl-symbol-matching-sequence",
+          "name": "Symbol Matching Sequence for Damage",
+          "description": "Before damage phases can be initiated, players must match symbols between realities. The symbol matching process involves identifying symbols in one reality, shifting to the other reality, and matching them correctly. This must be completed before bell activation for damage phases. Incorrect symbol matching prevents damage phase initiation.",
+          "type": "puzzle",
+          "solution": "Phase 1: Identify symbols displayed in real Leviathan (or Nightmare Realm). Phase 2: Shift to other reality using bell activation with Standard. Phase 3: Locate matching symbols in the other reality. Phase 4: Interact with or activate matching symbols in the correct sequence. Phase 5: Verify all symbols are matched correctly. Phase 6: Once symbols matched, prepare for bell activation sequence for damage phase. Complete symbol matching efficiently to enable damage phases quickly.",
+          "tips": [
+            "Symbol matching required before each damage phase",
+            "Match symbols between realities",
+            "Identify symbols in one reality first",
+            "Shift to other reality to find matches",
+            "Activate symbols in correct sequence",
+            "Verify all symbols matched before bell activation",
+            "Work efficiently - symbol matching delays damage phases",
+            "Clear communication essential for matching"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, symbol matching speed directly impacts damage phase availability. Slow matching reduces total damage phase opportunities. Accuracy is critical - incorrect matching wastes time."
+        },
+        {
+          "id": "caiatl-nightmare-containement-critical",
+          "name": "Critical Nightmare Containment",
+          "description": "Nightmare energy builds up throughout the Caiatl encounter and must be contained to prevent wipe mechanics. Containment is managed through symbol matching and Standard Bearer defeats. If Nightmare containment fails (symbols not matched in time or Standard Bearers not defeated quickly enough), the encounter may wipe or become extremely difficult. Containment is more critical in this encounter than previous ones.",
+          "type": "other",
+          "solution": "Maintain Nightmare containment through efficient symbol matching and Standard Bearer defeats. Symbol matching reduces Nightmare buildup - complete matching quickly to maintain containment. Defeat Standard Bearers promptly to help containment. Monitor containment status (may have visual indicators like glowing effects or screen effects). If containment is failing, prioritize symbol matching and Standard Bearer defeats over other mechanics. Containment failure may cause wipes or severely increased difficulty.",
+          "tips": [
+            "Nightmare containment is critical in this encounter",
+            "Symbol matching reduces Nightmare buildup",
+            "Defeating Standard Bearers helps containment",
+            "Work efficiently to maintain containment",
+            "Failure may cause wipes",
+            "Containment status may have visual indicators",
+            "Prioritize containment if it's failing",
+            "Time limits apply for containment"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, Nightmare containment timers are very strict. Failure to maintain containment results in wipes. Symbol matching and Standard Bearer defeat speed are directly tied to survival."
+        },
+        {
+          "id": "caiatl-caiatl-attacks",
+          "name": "Caiatl's Attacks and Behaviors",
+          "description": "Caiatl actively attacks players throughout the encounter with powerful abilities. She may use area-of-effect attacks, direct damage, and movement abilities. Players must avoid her attacks while executing mechanics. Caiatl's attacks become more aggressive as the encounter progresses or during specific phases.",
+          "type": "boss",
+          "solution": "Maintain awareness of Caiatl's position and attack patterns. Avoid her area-of-effect attacks by positioning safely. Use cover and movement abilities to avoid direct damage. During damage phases in Nightmare Realm, be aware of her attack patterns while dealing damage. Don't let Caiatl's attacks interrupt mechanic execution - balance survival with mechanic completion.",
+          "tips": [
+            "Caiatl actively attacks throughout encounter",
+            "Avoid area-of-effect attacks",
+            "Use cover and movement abilities",
+            "Maintain awareness of her position",
+            "Attacks may become more aggressive over time",
+            "Don't let attacks interrupt mechanics",
+            "Balance survival with mechanic execution"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, Caiatl's attacks deal more damage and are more frequent. Survival while executing mechanics becomes more challenging."
+        },
+        {
+          "id": "caiatl-reality-coordination",
+          "name": "Multi-Reality Coordination",
+          "description": "The encounter requires constant coordination between players in the real Leviathan and Nightmare Realm. Different mechanics may be happening simultaneously in both realities. Players must communicate effectively across realities and coordinate bell activations, symbol matching, and add clear in both realms.",
+          "type": "puzzle",
+          "solution": "Maintain constant communication about what's happening in each reality. Split team responsibilities: some players focus on mechanics in real Leviathan, others in Nightmare Realm (though bell shifts move all players together). Coordinate bell activations so all players shift together at appropriate times. Communicate symbol locations and matching progress clearly. Ensure Standard Bearers in both realities are being defeated. Use clear callouts for reality-specific information.",
+          "tips": [
+            "Constant coordination between realities required",
+            "Maintain clear communication across realities",
+            "Split responsibilities between realities when possible",
+            "Coordinate bell activations for team shifts",
+            "Communicate symbol locations clearly",
+            "Ensure both realities are managed",
+            "Use clear callouts for reality-specific info",
+            "Bell shifts affect all players together"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, coordination failures are catastrophic. Miscommunication about symbols or bell timing can end runs. Practice clear communication protocols."
+        },
+        {
+          "id": "caiatl-encounter-flow",
+          "name": "Overall Caiatl Encounter Flow",
+          "description": "The encounter follows a complex cycle: defeat Standard Bearers → collect Standards → identify symbols → match symbols between realities → maintain Nightmare containment → coordinate bell activation for damage phase → damage phase in Nightmare Realm → return to real Leviathan → repeat. Each cycle must be executed precisely, with bell timing being the most critical element.",
+          "type": "boss",
+          "solution": "Phase 1: Continuous add clear, prioritize Standard Bearers, collect Standards. Phase 2: Identify symbols displayed in both realities while managing combat. Phase 3: Shift realities using bells (with Standards) as needed. Phase 4: Match symbols between realities by activating them in sequence. Phase 5: Maintain Nightmare containment through efficient mechanics. Phase 6: Prepare for damage phase - position all players, ensure Standards available. Phase 7: Coordinate simultaneous bell activation (typically 3 bells) to shift to Nightmare Realm. Phase 8: Damage phase - maximize damage output on Caiatl. Phase 9: Return to real Leviathan, repeat cycle. Assign specific roles: bell coordinator, symbol identifier, Standard collector, add clear specialist. Practice bell timing above all else.",
+          "tips": [
+            "Complex cycle: Standards → Symbols → Bells → Damage → Repeat",
+            "Bell timing is the most critical mechanic",
+            "Assign specific roles to players",
+            "Practice bell coordination extensively",
+            "Maintain Nightmare containment throughout",
+            "Efficient symbol matching enables more damage phases",
+            "Maximize damage in each phase (limited phases)",
+            "Clear communication essential at all times",
+            "Master bell timing - it's the make-or-break mechanic",
+            "Contest mode: typically 3-4 damage phases maximum"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "This is the most challenging encounter in contest mode. Bell timing must be perfect - one mistimed bell fails the damage phase. With only 3-4 damage phases maximum, every phase counts. Symbol matching speed directly impacts how many damage phases you can attempt. Nightmare containment failures cause wipes. This encounter requires perfect execution of all mechanics with precise timing and coordination. Practice extensively before contest mode attempts."
+        },
+        {
+          "id": "caiatl-damage-optimization",
+          "name": "Damage Phase Optimization Strategies",
+          "description": "Damage phases are limited (3-4 maximum in contest mode), so optimization is critical. Players must maximize damage output during each phase. This requires coordinated buffs, debuffs, optimal weapon loadouts, and efficient damage rotations. Environmental factors and Caiatl's attacks must be managed during damage.",
+          "type": "boss",
+          "solution": "Before damage phase: Set up damage buffs (Well of Radiance, Ward of Dawn/Weapons of Light, Empowering Rift). Apply debuffs to Caiatl (Tractor Cannon, Tether, Divinity). Ensure all players have heavy ammo and optimal damage weapons ready. During damage phase: Position in buff zones, focus fire on Caiatl, maintain buffs/debuffs, use heavy weapons and supers efficiently, clear adds if needed, avoid environmental hazards. After damage phase: Quickly reset for next cycle. Coordinate supers for burst damage windows.",
+          "tips": [
+            "Damage phases are limited - maximize each one",
+            "Coordinate damage buffs (Well, Bubble, Rift)",
+            "Apply debuffs (Tractor, Tether, Divinity)",
+            "Use optimal damage weapons (Rockets, Linear Fusions)",
+            "Position in buff zones during damage",
+            "Coordinate supers for burst windows",
+            "Clear adds during damage if blocking",
+            "Avoid hazards while maintaining damage",
+            "Practice damage rotations",
+            "Failed bell activations waste damage phase opportunities"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "With only 3-4 damage phases maximum, optimization is absolutely critical. Low-damage phases may prevent completion. Every damage phase opportunity is precious - failed bell activations waste these opportunities. Perfect damage phase execution combined with perfect bell timing is required for success."
+        },
+        {
+          "id": "caiatl-solo-strategies",
+          "name": "Solo Player Strategies",
+          "description": "The Caiatl encounter can be completed solo, but requires excellent execution of all mechanics. Solo players must handle all roles: Standard collection, symbol identification, bell activation, add clear, and damage. Time management becomes even more critical solo. Bell timing must be perfect as there's no team coordination buffer.",
+          "type": "boss",
+          "solution": "As a solo player, you must execute all mechanics yourself. Efficiently defeat Standard Bearers and collect Standards. Identify symbols quickly - take time to verify before proceeding. For bell activation during damage phases, you must activate all required bells yourself (may require rapid movement between bells or specific positioning). Prioritize survival - dying resets progress. Use survivability builds and weapons. Practice extensively to master timing and efficiency. Symbol matching solo requires shifting realities multiple times - plan your route efficiently.",
+          "tips": [
+            "Solo requires executing all mechanics yourself",
+            "Efficient Standard collection is critical",
+            "Take time for accurate symbol identification",
+            "Bell activation solo may require rapid movement",
+            "Prioritize survival - deaths reset progress",
+            "Use survivability-focused builds",
+            "Practice extensively to master timing",
+            "Plan symbol matching routes efficiently",
+            "Damage phases solo are challenging - maximize each one",
+            "Time management is even more critical solo"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "caiatl-environmental-hazards",
+          "name": "Environmental Hazards",
+          "description": "The arena features environmental hazards that can damage or kill players. These may include Darkness effects, floor hazards, or arena-specific dangers. Hazards may be present in both realities or change based on current reality. During damage phases in Nightmare Realm, additional hazards may activate.",
+          "type": "other",
+          "solution": "Maintain awareness of environmental hazards throughout the encounter. Avoid hazardous floor areas, Darkness effects, and other arena dangers. Hazards may change when shifting realities - be aware of new hazards after bell activations. During damage phases, position safely while maintaining damage output. Use movement abilities to avoid hazards quickly.",
+          "tips": [
+            "Environmental hazards present in arena",
+            "Avoid hazardous floor areas",
+            "Watch for Darkness effects",
+            "Hazards may change between realities",
+            "Be aware after bell activations",
+            "Position safely during damage phases",
+            "Use movement abilities to avoid hazards"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "caiatl-add-management-final",
+          "name": "Comprehensive Add Management",
+          "description": "The encounter features continuous add spawns including Cabal Legionnaires, Phalanxes, Psions, Gladiators, and Standard Bearers. Adds spawn in both realities. Players must balance add clear with mechanic execution throughout the encounter. Add management becomes more challenging during damage phase preparation and execution.",
+          "type": "add-clear",
+          "solution": "Maintain continuous add clear while executing all mechanics. Prioritize Standard Bearers for Standard collection. Clear adds that are blocking bells, symbol viewing areas, or safe positioning. Use area-of-effect abilities and weapons for efficient add clear. Assign add clear responsibilities, but all players should contribute. During damage phase preparation, clear adds quickly to enable safe bell activation positioning. Adds continue spawning during damage phases - clear if they become a threat.",
+          "tips": [
+            "Continuous add spawns in both realities",
+            "Prioritize Standard Bearers",
+            "Clear adds blocking mechanics",
+            "Use AOE abilities for efficiency",
+            "All players contribute to add clear",
+            "Clear adds before damage phase preparation",
+            "Manage adds during damage phases if needed",
+            "Balance add clear with all mechanics"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, adds are more aggressive and spawn more frequently. Efficient add clear is essential to maintain mechanic execution pace and enable safe bell activation positioning."
+        }
+      ]
+    }
+  ]
+}

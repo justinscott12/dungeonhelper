@@ -1,0 +1,430 @@
+{
+  "id": "sundered-doctrine",
+  "name": "Sundered Doctrine",
+  "type": "dungeon",
+  "description": "A Darkness-themed dungeon set within a Pyramid ship. Players navigate through Darkness-infused architecture while solving symbol-based puzzles and manipulating Darkness beams. The dungeon uses a symbol language system similar to Vow of the Disciple, with mechanics designed to be soloable by any player. The core mechanic throughout the dungeon is that symbols form sentences that must be TRUE based on game lore (e.g., 'guardian kill witness', 'guardian worship light', 'hive worship darkness').",
+  "encounters": [
+    {
+      "id": "sundered-doctrine-flooded-inspection",
+      "name": "The Riddle",
+          "description": "The Riddle encounter where players must identify symbols that form true sentences based on game lore, defeat Truthspeaker Grims, and direct Darkness beams through lenses to activate target wheels. The core mechanic is that 3 symbols form a sentence that must be TRUE according to lore (e.g., 'guardian kill witness', 'guardian worship light', 'hive worship darkness'). The Riddle progressively increases in difficulty with more beams required each round.",
+      "type": "encounter",
+      "order": 1,
+      "mechanics": [
+        {
+          "id": "flooded-inspection-symbol-identification",
+          "name": "Symbol Identification and Truth Sentence Formation",
+          "description": "Players must identify symbols displayed on wheels around the arena. These symbols use the same language system as Vow of the Disciple. The core mechanic is that 3 symbols form a sentence that must be TRUE based on game lore. Examples: 'guardian kill witness', 'guardian worship light', 'hive worship darkness'. Players need to identify which symbols form true sentences according to lore.",
+          "type": "symbol",
+          "solution": "Observe all wheels in the arena and note which symbols are displayed. Each wheel shows one symbol. The core mechanic: 3 symbols form a sentence that must be TRUE according to game lore. Identify which 3 symbols, when read together, form a true statement. Examples: 'guardian kill witness' (true), 'guardian worship light' (true), 'hive worship darkness' (true). The missing symbols (revealed by Truthspeaker Grims) are the ones that form the true sentence.",
+          "tips": [
+            "Symbols use the Vow of the Disciple symbol language",
+            "Core mechanic: 3 symbols form a sentence that must be TRUE based on lore",
+            "Examples: 'guardian kill witness', 'guardian worship light', 'hive worship darkness'",
+            "Multiple wheels are visible around the arena",
+            "Each wheel displays one symbol",
+            "Identify which 3 symbols form a true sentence",
+            "Take time to identify all visible symbols and understand their meanings",
+            "Symbols may appear on wheels at different elevations",
+            "Knowledge of Destiny lore helps identify true sentences"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "flooded-inspection-truthspeaker-grims",
+          "name": "Defeat Truthspeaker Grims to Reveal Missing Symbols",
+          "description": "Truthspeaker Grims are special enemies that spawn during The Riddle. When defeated, they reveal which symbols are missing from the wheel display. These missing symbols are the ones that need to be matched.",
+          "type": "add-clear",
+          "solution": "Defeat all Truthspeaker Grims that spawn. Each defeated Grim will reveal information about missing symbols. Note which symbols are missing - these are the target symbols that need to be matched on the wheels.",
+          "tips": [
+            "Truthspeaker Grims are priority targets",
+            "Defeat them quickly to reveal missing symbol information",
+            "Multiple Grims may spawn per round",
+            "The revealed missing symbols are your targets for matching",
+            "Clear other adds while focusing on Grims"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "flooded-inspection-wheel-system",
+          "name": "Wheel System and Truth Sentence Matching",
+          "description": "The arena contains multiple wheels, each displaying a symbol. Players must identify which wheels show the symbols that form a TRUE sentence based on lore (the 3 missing symbols revealed by Truthspeaker Grims). These target wheels need to receive Darkness beams to activate them. The 3 symbols form a sentence that must be true (e.g., 'guardian kill witness').",
+          "type": "puzzle",
+          "solution": "After identifying the 3 missing symbols from defeated Grims (which form a true sentence based on lore), locate the wheels that display those symbols. These are your target wheels. The 3 symbols form a sentence that must be TRUE according to game lore. You will need to direct Darkness beams to these specific wheels to activate them. Each round requires matching more symbols (and thus directing more beams).",
+          "tips": [
+            "Wheels are positioned around the arena",
+            "Each wheel displays one symbol",
+            "Target wheels are those showing the 3 symbols that form a TRUE sentence",
+            "The 3 symbols form a sentence that must be true based on lore",
+            "Examples: 'guardian kill witness', 'guardian worship light', 'hive worship darkness'",
+            "You may need to rotate or reposition to see all wheels",
+            "Mark or call out target wheel locations clearly",
+            "Verify the sentence formed by the 3 symbols is TRUE according to lore"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "flooded-inspection-lens-activation",
+          "name": "Lens Activation and Beam Direction",
+          "description": "Darkness beam lenses are positioned around the arena. Players must activate these lenses to create Darkness beams. Once activated, beams can be rotated and directed toward target wheels. Each lens produces one beam that must be aimed correctly.",
+          "type": "puzzle",
+          "solution": "Interact with lens activation points to create Darkness beams. Once a beam is active, use rotation mechanics to change its direction. Rotate the beam until it points toward one of your target wheels (wheels showing missing symbols). Each beam must connect to a different target wheel. The Riddle starts with 1 beam, then 2, then 3, progressively increasing.",
+          "tips": [
+            "Lenses are activation points for Darkness beams",
+            "Each lens produces one beam",
+            "Beams can be rotated after activation",
+            "Aim beams at wheels showing missing symbols",
+            "Each beam must hit a different target wheel",
+            "Round 1: 1 beam, Round 2: 2 beams, Round 3: 3 beams"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "flooded-inspection-beam-rotation",
+          "name": "Beam Rotation and Direction",
+          "description": "After activating a lens to create a Darkness beam, players must rotate the beam to point it toward the correct target wheel. The rotation mechanism allows players to change the beam's direction. Each beam must be precisely aimed at a wheel displaying one of the missing symbols.",
+          "type": "puzzle",
+          "solution": "After activating a lens, interact with rotation controls to change the beam direction. Rotate the beam until it connects to a target wheel (one showing a missing symbol). Verify the beam is correctly aligned before moving to the next beam. All beams must be correctly connected simultaneously to progress.",
+          "tips": [
+            "Beams can be rotated after activation",
+            "Rotation controls are near each lens",
+            "Aim carefully - beams must connect precisely",
+            "Verify beam connection before activating next beam",
+            "All beams must be correctly connected at the same time",
+            "Visual feedback indicates successful connection"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "flooded-inspection-progression-system",
+          "name": "Progressive Beam Requirement",
+          "description": "The Riddle has multiple rounds, with each round requiring more beams to be correctly connected. Round 1 requires 1 beam, Round 2 requires 2 beams, and Round 3 requires 3 beams. Each round follows the same process: identify symbols, defeat Grims, match missing symbols, and direct beams.",
+          "type": "puzzle",
+          "solution": "Complete each round sequentially. Round 1: Identify missing symbols, activate 1 lens, direct 1 beam to target wheel. Round 2: Repeat process but activate 2 lenses and direct 2 beams to 2 different target wheels. Round 3: Activate 3 lenses and direct 3 beams to 3 different target wheels. Complete all rounds to finish The Riddle.",
+          "tips": [
+            "Round 1: 1 beam required",
+            "Round 2: 2 beams required",
+            "Round 3: 3 beams required",
+            "Each round follows the same symbol identification process",
+            "Work efficiently - time limits apply in contest mode",
+            "Coordinate beam activation timing for multiple beams"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "Time limits apply to each round. Teams must work quickly to identify symbols, defeat Grims, and connect beams before time expires."
+        },
+        {
+          "id": "flooded-inspection-incorrect-connection",
+          "name": "Incorrect Beam Connection Consequences",
+          "description": "If a Darkness beam is incorrectly connected to a non-target wheel, or if beams are not all correctly connected simultaneously, a Tormentor will spawn. Additionally, progress resets and players must start the current round over. In contest mode, due to time constraints, spawning a Tormentor is effectively a wipe (very bad).",
+          "type": "other",
+          "solution": "Always verify beam connections before finalizing. Double-check that beams are pointing at wheels showing the symbols that form the TRUE sentence (not just any wheel). Ensure all required beams are correctly connected at the same time. In contest mode, incorrect connections are catastrophic - verify everything carefully before committing.",
+          "tips": [
+            "Incorrect connections spawn a Tormentor",
+            "Progress resets on incorrect connection",
+            "Must restart the current round after failure",
+            "In contest mode: Tormentor spawn = wipe (very bad due to time)",
+            "Verify all beams before finalizing connections",
+            "Double-check beams are on wheels with symbols forming TRUE sentences",
+            "Tormentors are dangerous - eliminate quickly if they spawn",
+            "Take time to verify rather than rushing and failing",
+            "In contest mode, accuracy is critical - one mistake can end the run"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, incorrect connections spawn a Tormentor which is effectively a wipe due to time constraints. This is very bad. Verification is absolutely critical - one mistake can end the run. Teams must be extremely careful and verify all beam connections before finalizing."
+        }
+      ]
+    },
+    {
+      "id": "sundered-doctrine-zoetic-lockset",
+      "name": "Zoetic Lockset",
+      "description": "The second encounter where players collect Resonance Splinters, defeat Wizards for Knowledge buffs, and manipulate wheel rotations by depositing Splinters and shooting Darkness nodes to change rotation direction.",
+      "type": "encounter",
+      "order": 2,
+      "mechanics": [
+        {
+          "id": "zoetic-lockset-resonance-splinter",
+          "name": "Resonance Splinter Collection",
+          "description": "Resonance Splinters are collectible items that spawn during the encounter. Players must collect these Splinters and deposit them into wheels to rotate symbols. Splinters are essential for manipulating the wheel system.",
+          "type": "puzzle",
+          "solution": "Collect Resonance Splinters as they spawn. Splinters appear at various locations in the arena. Pick them up and carry them to wheels. Each Splinter can be deposited into a wheel to rotate that wheel's symbol. Plan which wheels need rotation before collecting Splinters.",
+          "tips": [
+            "Splinters spawn at fixed locations",
+            "Pick up Splinters quickly - they may despawn",
+            "Each Splinter rotates one wheel one position",
+            "Plan your rotation strategy before collecting",
+            "Multiple players can collect Splinters simultaneously",
+            "Splinters are visible and easy to spot"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "zoetic-lockset-wizard-knowledge-buff",
+          "name": "Defeat Wizards for Knowledge Buffs",
+          "description": "Wizards spawn during the encounter. When defeated, they grant Knowledge buffs to players. These buffs are required to interact with certain mechanics or provide information needed to solve the puzzle. Knowledge buffs may be time-limited.",
+          "type": "add-clear",
+          "solution": "Defeat Wizards as they spawn. Upon defeat, players receive a Knowledge buff. This buff may be required to see certain symbols, interact with wheels, or understand which symbols need to be aligned. Coordinate Wizard kills to ensure all players have Knowledge when needed.",
+          "tips": [
+            "Wizards are priority targets",
+            "Knowledge buff is essential for puzzle solving",
+            "Buffs may be time-limited - use quickly",
+            "All players may need Knowledge buffs",
+            "Wizards spawn at predictable intervals",
+            "Clear adds while focusing on Wizards"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "zoetic-lockset-wheel-rotation",
+          "name": "Wheel Rotation System",
+          "description": "Wheels display symbols and can be rotated. Players deposit Resonance Splinters into wheels to rotate them. Each Splinter rotates a wheel one symbol position. Wheels can rotate clockwise or counterclockwise, and the direction can be changed by shooting Darkness nodes.",
+          "type": "puzzle",
+          "solution": "Deposit Resonance Splinters into wheels to rotate symbols. Each deposit rotates the wheel one position. Determine which direction each wheel needs to rotate to align symbols correctly. Use Darkness nodes to change rotation direction if needed. Rotate wheels until symbols align according to the puzzle requirements.",
+          "tips": [
+            "Each Splinter rotates one wheel one position",
+            "Wheels rotate in a fixed direction (clockwise or counterclockwise)",
+            "Rotation direction can be changed via Darkness nodes",
+            "Plan rotations before depositing Splinters",
+            "Count rotations needed for each wheel",
+            "Visual feedback shows current symbol alignment"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "zoetic-lockset-splinter-deposit",
+          "name": "Deposit Splinters to Rotate Symbols",
+          "description": "After collecting Resonance Splinters, players must deposit them into wheels. Each deposit rotates that wheel's symbol display by one position. Players must deposit the correct number of Splinters to align symbols as required by the puzzle.",
+          "type": "puzzle",
+          "solution": "Carry collected Splinters to target wheels. Interact with wheels to deposit Splinters. Each deposit rotates the wheel one symbol position. Calculate how many rotations each wheel needs, then deposit the corresponding number of Splinters. Multiple players can deposit simultaneously to speed up the process.",
+          "tips": [
+            "Interact with wheels to deposit Splinters",
+            "Each deposit = one rotation",
+            "Calculate rotations needed before depositing",
+            "Multiple players can deposit at once",
+            "Deposit Splinters in the correct order if sequence matters",
+            "Verify symbol alignment after each deposit"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "zoetic-lockset-darkness-node-rotation",
+          "name": "Darkness Node Shooting to Change Rotation Direction",
+          "description": "Darkness nodes are shootable objects near wheels. Shooting a Darkness node changes that wheel's rotation direction (from clockwise to counterclockwise or vice versa). This allows players to control which direction wheels rotate when Splinters are deposited.",
+          "type": "puzzle",
+          "solution": "Identify Darkness nodes near wheels. Shoot nodes to toggle rotation direction for associated wheels. Determine which direction each wheel needs to rotate to achieve correct symbol alignment. Shoot nodes before depositing Splinters to ensure wheels rotate in the correct direction.",
+          "tips": [
+            "Darkness nodes are visible near wheels",
+            "Shooting a node toggles that wheel's rotation direction",
+            "Set rotation direction before depositing Splinters",
+            "Nodes provide visual feedback when shot",
+            "Each wheel has its own Darkness node",
+            "Verify direction before committing Splinters"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "zoetic-lockset-symbol-alignment",
+          "name": "Symbol Alignment Effects",
+          "description": "When symbols on wheels are correctly aligned according to the puzzle requirements, different effects trigger. Correct alignment may spawn additional enemies, initiate damage phases, or progress the encounter. Incorrect alignment may spawn enemies or reset progress.",
+          "type": "puzzle",
+          "solution": "Align symbols according to the puzzle requirements (which may be revealed by Knowledge buffs or Truthspeaker Grims). When symbols are correctly aligned, the encounter progresses. This may trigger enemy spawns that need to be cleared, or it may initiate a damage phase. Complete all required alignments to finish the encounter.",
+          "tips": [
+            "Correct alignment triggers encounter progression",
+            "Alignment may spawn enemies - be prepared",
+            "Alignment may initiate damage phases",
+            "Verify alignment before finalizing",
+            "Multiple alignments may be required",
+            "Incorrect alignment may spawn dangerous enemies"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "zoetic-lockset-enemy-management",
+          "name": "Enemy Management Strategies",
+          "description": "The encounter features various enemy types including Wizards, standard adds, and potentially dangerous enemies that spawn on incorrect alignment. Players must balance puzzle solving with add clear to maintain control of the arena.",
+          "type": "add-clear",
+          "solution": "Prioritize Wizards for Knowledge buffs, but maintain add clear throughout. When dangerous enemies spawn (from incorrect alignment or progression), eliminate them quickly. Assign roles: some players focus on puzzle mechanics while others handle add clear. Rotate roles as needed.",
+          "tips": [
+            "Balance puzzle solving with add clear",
+            "Wizards are priority for Knowledge buffs",
+            "Dangerous enemies spawn on incorrect alignment",
+            "Assign roles: puzzle vs add clear",
+            "Maintain arena control at all times",
+            "Use area-of-effect abilities for add clear efficiency"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": true,
+          "contestModeNotes": "Time pressure in contest mode requires efficient enemy management. Don't let adds overwhelm while solving puzzles."
+        }
+      ]
+    },
+    {
+      "id": "sundered-doctrine-kerrev-erased",
+      "name": "Kerrev, The Erased",
+      "description": "The final boss encounter featuring Kerrev, The Erased. Players must interpret truth and lie puzzles based on symbol names forming sentences and game lore, then activate/deactivate symbols on a circular panel (6 symbols in 2 sets of three) by going to symbol rooms, obtaining Unwritten Empowerment buffs from Dread Psions, using the buff to shoot strand splinters off lenses, and moving lenses to initiate damage phases. To solve the puzzle: activate the lies (to burn them) and deactivate the truth.",
+      "type": "boss",
+      "order": 3,
+      "mechanics": [
+        {
+          "id": "kerrev-symbol-puzzle-interpretation",
+          "name": "Truth and Lie Puzzle Interpretation",
+          "description": "The circular panel behind Kerrev displays 6 symbols arranged in 2 sets of three. The core mechanic is to determine truths and lies based on symbol names forming a sentence and the game's lore. Players must identify which symbols represent the truth and which represent lies, then activate the lies to 'burn the lie' and deactivate the truth.",
+          "type": "puzzle",
+          "solution": "Observe the 6 symbols on the circular panel (arranged in 2 sets of three). The symbol names form a sentence when read together. Based on the game's lore and the meaning of the sentence, determine which symbols represent truths and which represent lies. You must activate the lies (to burn them) and deactivate the truth. This requires understanding both the symbol meanings and the lore context.",
+          "tips": [
+            "The circular panel has 6 symbols total, in 2 sets of three",
+            "Symbol names form a sentence when read together",
+            "Core mechanic: determine truth vs lies based on lore",
+            "Must activate lies to 'burn the lie'",
+            "Must deactivate the truth",
+            "Requires knowledge of symbol meanings and game lore",
+            "Take time to interpret the sentence and lore context correctly"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "kerrev-circular-panel",
+          "name": "Circular Panel with 6 Symbols",
+          "description": "The circular panel behind Kerrev displays 6 symbols arranged in 2 sets of three. Each symbol corresponds to a room elsewhere in the encounter. The panel's state determines whether damage phases can be initiated. Correct configuration of active/inactive symbols is required - lies must be activated to burn them, and truth must be deactivated.",
+          "type": "puzzle",
+          "solution": "The panel shows 6 symbols in 2 sets of three. Each symbol has a corresponding room. To change a symbol's state, you must go to that symbol's room, get the Unwritten Empowerment buff from a Dread Psion, and move lenses. The panel provides visual feedback showing which symbols are active (likely glowing or highlighted) and which are inactive. Verify all symbols (lies and truth) are correctly activated before damage phase.",
+          "tips": [
+            "Panel displays 6 symbols total, arranged in 2 sets of three",
+            "Each symbol corresponds to a specific room",
+            "To change symbol state, go to that symbol's room",
+            "Active symbols are visually distinct (glowing/highlighted)",
+            "Verify all symbols are in correct state before proceeding",
+            "Panel state must be correct to initiate damage phase",
+            "Lies must be activated (to burn them), truth must be deactivated"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "kerrev-symbol-activation",
+          "name": "Room-Based Symbol Activation via Lenses",
+          "description": "To activate or deactivate symbols on the circular panel, players must go to different rooms that correspond to each symbol. In each symbol's room, players must get the Unwritten Empowerment buff from a Dread Psion, use the buff to shoot strand splinters off the lenses, then move lenses to turn that symbol on or off. This is how you activate the lies (to burn them) and deactivate the truth.",
+          "type": "puzzle",
+          "solution": "For each symbol that needs to be activated or deactivated: (1) Go to the room corresponding to that symbol, (2) Defeat or interact with a Dread Psion to obtain the Unwritten Empowerment buff, (3) Use the Unwritten Empowerment buff to shoot the strand splinters off the lenses, (4) Move the lenses in that room to turn the symbol on (active) or off (inactive). Repeat this process for all symbols that need to be changed - both the lies (to burn them) and the truth. Multiple players can work on different symbol rooms simultaneously to speed up the process.",
+          "tips": [
+            "Each symbol has its own corresponding room",
+            "Must obtain Unwritten Empowerment buff from Dread Psion in that room",
+            "Move lenses in the room to activate/deactivate that symbol",
+            "Multiple players can work different symbol rooms at once",
+            "Activate lies to burn them, deactivate the truth",
+            "Coordinate which players go to which symbol rooms",
+            "Unwritten Empowerment buff may be time-limited - work quickly",
+            "Verify symbol state changes on the main circular panel after lens movement"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "kerrev-unwritten-empowerment",
+          "name": "Unwritten Empowerment Buff from Dread Psions",
+          "description": "Dread Psions spawn in symbol rooms. Players must defeat or interact with these Dread Psions to obtain the Unwritten Empowerment buff. This buff is required to shoot strand splinters off lenses and then move lenses to activate/deactivate symbols. The buff may be time-limited, so players should work quickly after obtaining it.",
+          "type": "add-clear",
+          "solution": "When in a symbol's room, locate and defeat the Dread Psion (or interact with it) to receive the Unwritten Empowerment buff. This buff is essential for shooting strand splinters off lenses and then moving lenses to activate/deactivate that symbol. After obtaining the buff, immediately shoot the strand splinters off the lenses, then move to the lens mechanism and adjust it to change the symbol state. Multiple players may need to coordinate buff collection in different rooms simultaneously.",
+          "tips": [
+            "Dread Psions spawn in each symbol's room",
+            "Defeat or interact with Dread Psion to get Unwritten Empowerment buff",
+            "Buff is required to shoot strand splinters off lenses and then move lenses",
+            "Buff may be time-limited - work quickly after obtaining",
+            "Coordinate buff collection across multiple symbol rooms",
+            "Clear adds in symbol rooms while collecting buffs"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "kerrev-lens-movement",
+          "name": "Moving Lenses to Activate/Deactivate Symbols",
+          "description": "After obtaining the Unwritten Empowerment buff in a symbol's room, players must move lenses to activate or deactivate that symbol on the circular panel. The lens mechanism controls whether the corresponding symbol on the main panel is active (on) or inactive (off).",
+          "type": "puzzle",
+          "solution": "With the Unwritten Empowerment buff active, shoot the strand splinters off the lenses in the symbol room. After the splinters are removed, interact with the lens mechanisms to move them to the correct position - one position turns the symbol on (active), another position turns it off (inactive). After moving lenses, verify the symbol state has changed on the main circular panel. Move lenses for all symbols that need to be changed (activate lies to burn them, deactivate truth).",
+          "tips": [
+            "Must have Unwritten Empowerment buff to interact with lenses",
+            "Use the buff to shoot strand splinters off the lenses first",
+            "After splinters are removed, you can move the lenses",
+            "Lens movement activates/deactivates the corresponding symbol",
+            "Verify symbol state changed on main panel after moving lenses",
+            "Different lens positions = on/off states",
+            "Move lenses for all symbols that need changing",
+            "Work efficiently as buff may be time-limited"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "kerrev-damage-phase-initiation",
+          "name": "Damage Phase Initiation",
+          "description": "When symbols on the circular panel are correctly configured (activated/deactivated according to puzzle statements), a damage phase is initiated. During damage phases, players can damage Kerrev. The damage phase continues until Kerrev becomes immune again, and the encounter is typically limited to 3 damage phases in contest mode.",
+          "type": "boss",
+          "solution": "After determining which symbols are lies and which is truth, activate all lies (to burn them) and deactivate the truth by going to each symbol's room, obtaining Unwritten Empowerment from Dread Psions, using the buff to shoot strand splinters off lenses, then moving lenses. Once all required symbols are correctly configured on the circular panel (lies activated, truth deactivated), the damage phase begins. Immediately focus fire on Kerrev. Maximize damage output since contest mode limits to 3 damage phases. The damage phase ends when Kerrev becomes immune again. After damage phase ends, repeat the truth/lie puzzle process for the next phase.",
+          "tips": [
+            "Activate all lies (to burn them) and deactivate the truth",
+            "Correct symbol configuration (lies and truth activated) initiates damage phase",
+            "Damage phase continues until boss becomes immune",
+            "Contest mode: maximum 3 damage phases",
+            "Maximize damage in each phase",
+            "Prepare damage loadouts before encounter",
+            "Coordinate damage buffs and debuffs",
+            "After damage phase, puzzle resets with new truth/lie sentence for next phase"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "Only 3 damage phases allowed in contest mode. Must maximize damage each phase. Failed damage phases waste precious attempts."
+        },
+        {
+          "id": "kerrev-environmental-hazards",
+          "name": "Environmental Hazards During Damage Phases",
+          "description": "During damage phases, environmental hazards activate that can damage or kill players. These may include Darkness beams, floor hazards, moving obstacles, or other Pyramid ship environmental effects. Players must avoid these while dealing damage to Kerrev.",
+          "type": "other",
+          "solution": "During damage phases, remain aware of environmental hazards. Avoid Darkness beams, stay off hazardous floor areas, and dodge moving obstacles. Position safely while maintaining damage output. Use movement abilities and positioning to avoid hazards without losing too much damage time.",
+          "tips": [
+            "Environmental hazards activate during damage phases",
+            "Watch for Darkness beams and floor hazards",
+            "Maintain damage while avoiding hazards",
+            "Use movement abilities to dodge",
+            "Position safely but maintain damage uptime",
+            "Hazards may change between damage phases"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "kerrev-damage-optimization",
+          "name": "Damage Phase Strategies and Optimization",
+          "description": "Damage phases are limited (3 maximum in contest mode), so optimization is critical. Players should coordinate damage buffs (Well of Radiance, Weapons of Light), debuffs (Tractor Cannon, Tether), and use optimal damage weapons. Environmental hazards must be avoided while maintaining damage output.",
+          "type": "boss",
+          "solution": "Before damage phase: Set up damage buffs (Well, Bubble), apply debuffs to boss, position optimally. During damage phase: Focus fire on Kerrev, avoid environmental hazards, maintain buffs, use heavy/special weapons efficiently. Coordinate supers and abilities for maximum burst damage. After phase: Quickly reset for next puzzle phase.",
+          "tips": [
+            "Coordinate damage buffs (Well, Bubble, Empowering Rift)",
+            "Apply debuffs (Tractor, Tether, Divinity)",
+            "Use optimal damage weapons (Rockets, Linear Fusions, etc.)",
+            "Avoid hazards while maintaining damage",
+            "Coordinate supers for burst windows",
+            "Only 3 damage phases - maximize each one",
+            "Reset quickly after damage phase for next puzzle"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "With only 3 damage phases, optimization is critical. Failed or low-damage phases may prevent completion within contest time limits."
+        }
+      ]
+    }
+  ]
+}

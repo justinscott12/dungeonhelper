@@ -1,0 +1,471 @@
+{
+  "id": "warlords-ruin",
+  "name": "Warlord's Ruin",
+  "type": "dungeon",
+  "description": "A Scorn-themed dungeon set in a frozen wasteland where players face wish-empowered Scorn enemies. The dungeon features unique mechanics involving Scorn Lanterns, corruption cleansing, and environmental hazards like Biting Cold. Players must master lantern cleansing, corruption management, and multi-level navigation to overcome the challenges.",
+  "encounters": [
+    {
+      "id": "warlords-ruin-rathil",
+      "name": "Rathil, First Broken Knight of Fikrul",
+      "description": "The first boss encounter featuring Rathil, a wish-empowered Scorn Broken Knight. Players must cleanse corrupted Scorn Lanterns to convert them to wish-empowered lanterns, escape from cages using Blighted Eyes, and activate lanterns to extend damage phases.",
+      "type": "boss",
+      "order": 1,
+      "mechanics": [
+        {
+          "id": "rathil-scorn-lantern-cleansing",
+          "name": "Scorn Lantern Cleansing (Corrupted to Wish-Empowered)",
+          "description": "Scorn Lanterns spawn around the arena in a corrupted state (appearing dark/purple). Players must cleanse these lanterns by standing near them and interacting, which converts them from corrupted (dark) to wish-empowered (golden/bright). However, players must first receive the empowerment buff by escaping from cages before they can cleanse lanterns. Cleansed lanterns are required to extend damage phases and progress the encounter.",
+          "type": "puzzle",
+          "solution": "First, players must be detained in cages and escape to receive the empowerment buff. Once empowered, locate corrupted Scorn Lanterns around the arena. Approach each lantern and interact with it to cleanse it (only empowered players can cleanse). The lantern will change from a dark/corrupted appearance to a bright golden/wish-empowered state. Multiple lanterns must be cleansed throughout the encounter. Cleansed lanterns can then be activated to extend damage phases.",
+          "tips": [
+            "Must have empowerment buff to cleanse lanterns",
+            "Get empowerment buff by escaping from cages first",
+            "Corrupted lanterns appear dark/purple",
+            "Wish-empowered lanterns appear golden/bright",
+            "Stand near lanterns and interact to cleanse (only if empowered)",
+            "Cleansing takes a moment - don't move away too quickly",
+            "Multiple lanterns need cleansing per damage cycle",
+            "Cleansed lanterns can be activated later"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "rathil-cage-teleportation",
+          "name": "Cage Teleportation and Blighted Eyes",
+          "description": "During the encounter, players are teleported into cages that appear around the arena. To escape from a cage, players must locate and destroy Blighted Eyes that spawn near the cage. Blighted Eyes are glowing orbs that must be shot to break the cage and allow escape. Players outside cages should help destroy Blighted Eyes to free trapped teammates. After being freed from a cage, players receive an empowerment buff.",
+          "type": "other",
+          "solution": "When teleported into a cage, look for Blighted Eyes (glowing orbs) near the cage structure. Shoot the Blighted Eyes to destroy them. Once all Blighted Eyes are destroyed, the cage breaks and the player can escape. Players outside cages should prioritize destroying Blighted Eyes to free trapped teammates quickly, as trapped players cannot contribute to mechanics. After escaping a cage, players receive an empowerment buff that allows them to interact with mechanics.",
+          "tips": [
+            "Cages teleport players during the encounter",
+            "Blighted Eyes spawn near cages",
+            "Shoot Blighted Eyes to break cages",
+            "Free trapped teammates quickly",
+            "Multiple Blighted Eyes may need to be destroyed",
+            "Trapped players cannot help with mechanics",
+            "Coordinate to free teammates efficiently",
+            "Players receive empowerment buff after being freed from cages"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "rathil-empowerment-buff",
+          "name": "Empowerment Buff After Cage Escape",
+          "description": "After a player escapes from a cage by destroying Blighted Eyes, they receive an empowerment buff. This buff is required to interact with certain mechanics, such as cleansing corrupted Scorn Lanterns. Players must first be detained in cages and freed before they can participate in lantern cleansing and other empowerment-required mechanics.",
+          "type": "other",
+          "solution": "Players are teleported into cages during the encounter. To receive the empowerment buff, players must escape from cages by destroying Blighted Eyes. Once freed, players receive the empowerment buff which allows them to cleanse corrupted Scorn Lanterns and interact with other mechanics. The order is: get detained in cage → escape by destroying Blighted Eyes → receive empowerment buff → use buff to cleanse lanterns and complete mechanics.",
+          "tips": [
+            "Empowerment buff is received AFTER escaping from cages",
+            "Must be detained in cage first to get the buff",
+            "Buff allows interaction with lantern cleansing mechanics",
+            "Only empowered players can cleanse corrupted lanterns",
+            "Coordinate cage escapes to ensure all players get empowered",
+            "Monitor buff icon to confirm empowerment status",
+            "Buff may have a duration - use it quickly after receiving"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "rathil-lantern-activation-damage-extension",
+          "name": "Lantern Activation to Extend Damage Phases",
+          "description": "After cleansing Scorn Lanterns, players can activate them to extend damage phases. When a damage phase begins, players have a limited time to damage Rathil. Activating wish-empowered lanterns extends this damage window, giving players more time to deal damage. Multiple lanterns can be activated to further extend the damage phase.",
+          "type": "boss",
+          "solution": "During damage phases, interact with wish-empowered (cleansed) lanterns to activate them. Each activated lantern extends the damage phase timer. Activate multiple lanterns to maximize damage time. Prioritize activating lanterns early in the damage phase to get maximum benefit. Coordinate lantern activation timing to ensure smooth damage phases.",
+          "tips": [
+            "Only wish-empowered lanterns can be activated",
+            "Activating lanterns extends damage phase timer",
+            "Activate lanterns early in damage phase",
+            "Multiple lanterns = longer damage window",
+            "Coordinate activation timing",
+            "Balance lantern activation with damage dealing",
+            "Activated lanterns provide visual/audio feedback"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, maximizing damage phase duration through lantern activation is critical for meeting DPS requirements."
+        },
+        {
+          "id": "rathil-encounter-flow",
+          "name": "Overall Encounter Flow and Strategy",
+          "description": "The encounter follows a cycle: players get detained in cages, escape to receive empowerment buff, cleanse corrupted lanterns (requires empowerment), initiate damage phase, activate lanterns to extend damage, damage Rathil, repeat. Players must balance add clear, cage escapes, empowerment acquisition, lantern cleansing, and damage optimization throughout the encounter.",
+          "type": "boss",
+          "solution": "Phase 1: Players get detained in cages. Phase 2: Escape cages by destroying Blighted Eyes to receive empowerment buff. Phase 3: Use empowerment buff to cleanse corrupted Scorn Lanterns, converting them to wish-empowered. Phase 4: When damage phase initiates, quickly activate wish-empowered lanterns to extend damage window. Phase 5: Deal maximum damage to Rathil while managing adds and future cage teleportations. Phase 6: Repeat cycle until Rathil is defeated. Assign roles: some players focus on freeing caged teammates, others handle lantern mechanics once empowered, others manage add clear.",
+          "tips": [
+            "Cycle: get detained → escape cages → receive empowerment → cleanse lanterns → damage phase → activate lanterns → damage boss → repeat",
+            "Players must be detained in cages BEFORE getting empowerment buff",
+            "Only empowered players can cleanse lanterns",
+            "Free caged teammates immediately to get them empowered",
+            "Balance mechanics with add clear",
+            "Activate lanterns early in damage phases",
+            "Coordinate roles for efficiency",
+            "Manage adds during damage phases",
+            "Repeat cycle until boss is defeated"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        }
+      ]
+    },
+    {
+      "id": "warlords-ruin-locus",
+      "name": "Locus of Wailing Grief",
+      "description": "The second boss encounter featuring the Locus of Wailing Grief. Players must manage the Biting Cold debuff that accumulates over time, use burning torches to mitigate the debuff, defeat Scorn Broken Knights to spawn Scorn Lanterns, cleanse lanterns, collect Solar Charges, and deposit charges into braziers to initiate damage phases.",
+      "type": "boss",
+      "order": 2,
+      "mechanics": [
+        {
+          "id": "locus-biting-cold-debuff",
+          "name": "Biting Cold Debuff Accumulation",
+          "description": "The Biting Cold debuff is a stacking debuff that accumulates on all players over time during the encounter. As stacks increase, players take increasing damage and may eventually die if stacks become too high. The debuff must be cleansed by standing near burning torches. Standing near a torch removes the Biting Cold debuff stacks.",
+          "type": "other",
+          "solution": "Monitor your Biting Cold debuff stacks via the debuff icon. The debuff stacks continuously throughout the encounter. Stand near burning torches to cleanse the debuff - standing next to a torch removes your Biting Cold stacks. When stacks get high, prioritize moving to a torch to cleanse them. Plan movement to always have access to torches when stacks are high.",
+          "tips": [
+            "Biting Cold stacks continuously",
+            "Higher stacks = more damage taken",
+            "Stand near burning torches to cleanse debuff",
+            "Torches remove Biting Cold stacks",
+            "Cleanse regularly to prevent death",
+            "Monitor stacks via debuff icon",
+            "Plan routes to always access torches",
+            "High stacks can kill players"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "locus-burning-torches-cleansing",
+          "name": "Burning Torches to Cleanse Biting Cold",
+          "description": "Burning torches are environmental objects scattered around the arena. Standing near these torches cleanses the Biting Cold debuff, removing all stacks. Torches are required to remove the debuff - players must regularly stand near torches to cleanse their Biting Cold stacks. However, torches may go out and need to be relit, or players may need to move between torches to complete mechanics.",
+          "type": "other",
+          "solution": "Identify burning torch locations around the arena. When Biting Cold stacks accumulate, move to and stand near burning torches to cleanse the debuff. Standing next to a torch removes all Biting Cold stacks. Rotate between torches as needed while completing mechanics. If torches go out, they may need to be relit (possibly by depositing Solar Charges). Always maintain access to at least one burning torch. Cleanse regularly to prevent stack buildup.",
+          "tips": [
+            "Torches are scattered around the arena",
+            "Stand near torches to cleanse Biting Cold debuff",
+            "Torches remove all Biting Cold stacks",
+            "Cleanse regularly to prevent death",
+            "Rotate between torches as needed",
+            "Torches may need to be relit if they go out",
+            "Plan movement to maintain torch access",
+            "Torches are essential for survival"
+          ],
+          "difficulty": "easy",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "locus-broken-knights-lantern-spawn",
+          "name": "Defeat Scorn Broken Knights to Spawn Scorn Lanterns",
+          "description": "Scorn Broken Knights are special enemies that spawn during the encounter. When defeated, they cause Scorn Lanterns to spawn. These lanterns are required for the cleansing and Solar Charge collection mechanics. Players must defeat Broken Knights to progress the encounter and obtain lanterns for the damage phase setup.",
+          "type": "add-clear",
+          "solution": "Engage and defeat Scorn Broken Knights as they spawn. Each defeated Broken Knight causes a Scorn Lantern to spawn. These lanterns will be in a corrupted state and need to be cleansed. Defeat enough Broken Knights to spawn the required number of lanterns for the damage phase setup. Balance defeating Broken Knights with managing Biting Cold stacks.",
+          "tips": [
+            "Scorn Broken Knights are priority targets",
+            "Each defeated Knight spawns a Scorn Lantern",
+            "Defeat enough Knights for required lanterns",
+            "Balance Knight kills with Biting Cold management",
+            "Lanterns spawn near defeated Knights",
+            "Multiple Knights may need to be defeated",
+            "Clear other adds while focusing on Knights"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "locus-lantern-cleansing-solar-charge",
+          "name": "Lantern Cleansing and Solar Charge Collection",
+          "description": "After Scorn Lanterns spawn (from defeating Broken Knights), players must cleanse them from corrupted to wish-empowered state. Cleansing lanterns causes them to drop Solar Charges. Players must collect these Solar Charges and carry them to braziers. Solar Charges are required to activate braziers and initiate damage phases.",
+          "type": "puzzle",
+          "solution": "Cleanse spawned Scorn Lanterns by interacting with them (converting from corrupted to wish-empowered). Each cleansed lantern drops a Solar Charge. Collect the Solar Charges immediately after cleansing. Carry Solar Charges to braziers located around the arena. Deposit Solar Charges into braziers to activate them. Multiple charges may be needed per brazier, or multiple braziers may need activation.",
+          "tips": [
+            "Cleanse lanterns to convert them to wish-empowered",
+            "Cleansed lanterns drop Solar Charges",
+            "Collect charges immediately after cleansing",
+            "Carry charges to braziers",
+            "Deposit charges into braziers to activate",
+            "Multiple charges/braziers may be needed",
+            "Balance charge collection with Biting Cold management",
+            "Charges may have a timer before despawning"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "locus-brazier-damage-phase",
+          "name": "Brazier Activation to Initiate Damage Phases",
+          "description": "Braziers are large fire containers positioned around the arena. Players deposit Solar Charges into braziers to activate them. When the required number of braziers are activated (or the correct braziers are activated), a damage phase begins. During damage phases, players can damage the Locus of Wailing Grief. Braziers may need to be activated in a specific order or pattern.",
+          "type": "boss",
+          "solution": "Collect Solar Charges from cleansed lanterns. Deposit charges into braziers to activate them. Activate the required braziers (may need specific ones or a certain number). Once braziers are activated correctly, the damage phase begins. During damage phase, focus fire on the Locus while managing Biting Cold stacks. After damage phase, repeat the cycle: defeat Broken Knights, cleanse lanterns, collect charges, activate braziers.",
+          "tips": [
+            "Braziers are large fire containers",
+            "Deposit Solar Charges to activate braziers",
+            "May need specific braziers or a certain number",
+            "Correct activation initiates damage phase",
+            "Damage phase allows damage to Locus",
+            "Manage Biting Cold during damage phase",
+            "Repeat cycle after each damage phase",
+            "Braziers provide visual feedback when activated"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, efficient brazier activation and damage phase management is critical. Biting Cold pressure increases over time, making quick cycles important."
+        },
+        {
+          "id": "locus-encounter-flow",
+          "name": "Overall Encounter Flow and Strategy",
+          "description": "The encounter requires constant management of Biting Cold while completing mechanics: defeat Broken Knights to spawn lanterns, cleanse lanterns to get Solar Charges, deposit charges into braziers, initiate damage phase, damage boss, repeat. Players must regularly cleanse Biting Cold by standing near burning torches. Players must balance survival (torch cleansing) with mechanic completion throughout.",
+          "type": "boss",
+          "solution": "Continuous: Cleanse Biting Cold debuff by standing near burning torches. Cycle: Defeat Scorn Broken Knights → Lanterns spawn → Cleanse lanterns → Collect Solar Charges → Stand near torches to cleanse Biting Cold → Deposit charges into braziers → Damage phase begins → Damage Locus → Repeat cycle. Assign roles: some players handle mechanics while others manage adds and Biting Cold cleansing. Always maintain access to torches. Complete cycles efficiently to minimize Biting Cold accumulation time.",
+          "tips": [
+            "Constant Biting Cold cleansing required",
+            "Stand near torches to cleanse Biting Cold debuff",
+            "Cycle: Knights → Lanterns → Cleanse → Charges → Cleanse Biting Cold at torch → Braziers → Damage → Repeat",
+            "Always maintain torch access",
+            "Balance survival with mechanics",
+            "Assign roles for efficiency",
+            "Cleanse Biting Cold regularly throughout encounter",
+            "Complete cycles quickly to reduce Biting Cold time",
+            "Coordinate charge collection and brazier activation",
+            "Manage adds during all phases"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": false
+        }
+      ]
+    },
+    {
+      "id": "warlords-ruin-hefnd",
+      "name": "Hefnd's Vengeance, Blighted Chimera",
+      "description": "The final boss encounter featuring Hefnd's Vengeance, a massive Blighted Chimera. Players must manage the Hex of Vengeful Corruption debuff by transferring it to Corrupted Hex-Drinkers, navigate a multi-level ascending structure, cleanse Scorn Lanterns, manage corruption to extend damage phases, and coordinate complex mechanics across multiple levels.",
+      "type": "boss",
+      "order": 3,
+      "mechanics": [
+        {
+          "id": "hefnd-hex-vengeful-corruption",
+          "name": "Hex of Vengeful Corruption Debuff",
+          "description": "The Hex of Vengeful Corruption is a countdown timer debuff that players receive during the encounter. This timer counts down to 0 and will kill the player when it reaches 0. The debuff cannot be removed naturally and must be transferred to Corrupted Hex-Drinkers via melee attacks. Players must actively manage this debuff throughout the encounter.",
+          "type": "other",
+          "solution": "Monitor your Hex of Vengeful Corruption timer via the debuff icon. The timer counts down continuously and will kill you when it reaches 0. To remove the debuff, find Corrupted Hex-Drinkers (special enemies) and melee them to transfer the debuff. Each melee transfer removes your debuff timer completely and transfers it to the Hex-Drinker. Transfer the debuff regularly before the timer reaches 0 to prevent death.",
+          "tips": [
+            "Hex of Vengeful Corruption is a countdown timer",
+            "Timer counts down to 0 and kills you at 0",
+            "Cannot be removed naturally - must transfer",
+            "Melee Corrupted Hex-Drinkers to transfer debuff",
+            "Transfer regularly before timer reaches 0",
+            "Monitor timer via debuff icon",
+            "Hex-Drinkers spawn throughout encounter",
+            "Coordinate transfers to avoid all players having low timers",
+            "Transfer removes your debuff completely"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "hefnd-hex-drinker-transfer",
+          "name": "Transfer Hex to Corrupted Hex-Drinkers via Melee",
+          "description": "Corrupted Hex-Drinkers are special Scorn enemies that spawn during the encounter. Players with Hex of Vengeful Corruption timer must melee these enemies to transfer their debuff. Meleeing a Hex-Drinker removes the corruption timer from the player completely and transfers it to the Hex-Drinker. Hex-Drinkers may need to be defeated after receiving the debuff, or they may die automatically.",
+          "type": "add-clear",
+          "solution": "When Corrupted Hex-Drinkers spawn, players with Hex timer should melee them to transfer the debuff. Approach a Hex-Drinker and perform a melee attack (regular melee or charged melee). The transfer is immediate - your debuff timer is completely removed and transferred to the Hex-Drinker. After transfer, defeat the Hex-Drinker if needed. Multiple players can transfer to the same Hex-Drinker, but coordinate to avoid wasting transfers.",
+          "tips": [
+            "Corrupted Hex-Drinkers are special Scorn enemies",
+            "Melee Hex-Drinkers to transfer Hex debuff timer",
+            "Transfer removes your debuff timer completely",
+            "Debuff is transferred to the Hex-Drinker",
+            "Defeat Hex-Drinkers after transfer if needed",
+            "Multiple players can transfer to same Hex-Drinker",
+            "Coordinate transfers for efficiency",
+            "Regular melee or charged melee both work",
+            "Transfer before your timer reaches 0"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "hefnd-multi-level-structure",
+          "name": "Multi-Level Ascending Structure",
+          "description": "The encounter takes place in a multi-level structure where players must ascend through different levels/floors. The boss arena has multiple tiers or platforms that players must navigate between. Mechanics are distributed across these levels, requiring players to move vertically between floors. The structure may have specific paths or methods to ascend/descend between levels.",
+          "type": "other",
+          "solution": "Identify the multi-level structure and understand how to move between levels. Locate pathways, platforms, or jump points that allow vertical movement. Mechanics are spread across different levels, so players must navigate between floors to complete objectives. Some players may need to stay on specific levels while others move between them. Coordinate movement to ensure all mechanics are handled across all levels.",
+          "tips": [
+            "Arena has multiple levels/floors",
+            "Must navigate vertically between levels",
+            "Mechanics are distributed across levels",
+            "Identify pathways between floors",
+            "Some players may need to stay on specific levels",
+            "Coordinate movement across levels",
+            "Boss may move between levels",
+            "Levels may have different mechanics"
+          ],
+          "difficulty": "medium",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "hefnd-lantern-cleansing-multi-level",
+          "name": "Scorn Lantern Cleansing Across Multiple Levels",
+          "description": "Scorn Lanterns spawn across multiple levels of the encounter arena. Players must locate and cleanse these lanterns from corrupted to wish-empowered state. Lanterns may be on different floors, requiring players to navigate between levels to cleanse them all. Cleansed lanterns are used for corruption management and damage phase extension.",
+          "type": "puzzle",
+          "solution": "Locate Scorn Lanterns across all levels of the arena. Navigate between floors to reach lanterns on different levels. Cleanse each lantern by interacting with it (converting from corrupted to wish-empowered). Multiple lanterns across multiple levels must be cleansed. Coordinate team movement to cleanse lanterns efficiently across all floors. Cleansed lanterns can then be used for damage phase mechanics.",
+          "tips": [
+            "Lanterns spawn across multiple levels",
+            "Navigate between floors to reach all lanterns",
+            "Cleanse lanterns on each level",
+            "Coordinate to cover all levels",
+            "Some players may focus on specific levels",
+            "Cleansed lanterns are used for damage phases",
+            "Lanterns may spawn in different locations each cycle"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "hefnd-corruption-management-damage-extension",
+          "name": "Corruption Management to Extend Damage Phases",
+          "description": "Managing corruption (through Hex transfers and lantern cleansing) extends damage phases. When damage phases begin, players have a limited time window. By properly managing corruption throughout the encounter (transferring Hex stacks, cleansing lanterns), players can extend the damage phase duration. More corruption management = longer damage windows.",
+          "type": "boss",
+          "solution": "Throughout the encounter, actively manage corruption: transfer Hex timer debuffs to Hex-Drinkers regularly, cleanse all available lanterns, maintain low corruption levels. When damage phase initiates, the amount of corruption management completed determines damage phase duration. More management = longer phase. During damage phase, continue managing corruption if possible to further extend the window. Maximize damage output during extended phases.",
+          "tips": [
+            "Corruption management extends damage phases",
+            "Transfer Hex timer debuffs regularly",
+            "Cleanse all available lanterns",
+            "More management = longer damage windows",
+            "Maintain low corruption throughout encounter",
+            "Continue management during damage phase if possible",
+            "Coordinate to maximize corruption management",
+            "Extended phases allow more damage to boss"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": true,
+          "contestModeNotes": "In contest mode, maximizing damage phase duration through corruption management is essential for meeting DPS requirements. Efficient management across multiple levels is critical."
+        },
+        {
+          "id": "hefnd-final-stand",
+          "name": "Final Stand Phase",
+          "description": "When Hefnd's Vengeance reaches approximately 5% health, a final stand phase triggers. All players are teleported to the topmost platform of the arena for a decisive confrontation. During this phase, the boss continuously spawns Blighted Eyes that must be destroyed. Destroying Blighted Eyes extends the damage phase and prevents the boss from becoming immune. There is no time limit during final stand, allowing players to take a cautious approach.",
+          "type": "boss",
+          "solution": "When boss reaches ~5% health, final stand begins and all players are teleported to the top platform. The boss continuously spawns Blighted Eyes throughout this phase. Destroy Blighted Eyes as they spawn to extend the damage phase and prevent the boss from becoming immune. Focus fire on the boss while managing Blighted Eyes. Use high-damage weapons like Rocket Launchers or Linear Fusion Rifles. Long-range weapons like Wish-Ender Bow can be effective for maintaining distance. Coordinate with teammates to manage Blighted Eyes while dealing damage. There is no time limit, so prioritize survival and consistent damage.",
+          "tips": [
+            "Final stand triggers at approximately 5% boss health",
+            "All players teleported to topmost platform",
+            "Boss continuously spawns Blighted Eyes",
+            "Destroy Blighted Eyes to extend damage phase",
+            "Destroying eyes prevents boss from becoming immune",
+            "No time limit - take a cautious approach if needed",
+            "Use high-damage weapons (Rockets, Linear Fusions)",
+            "Long-range weapons effective for maintaining distance",
+            "Coordinate Blighted Eye management with teammates",
+            "Focus fire on boss while managing eyes",
+            "Prioritize survival - no rush due to no time limit"
+          ],
+          "difficulty": "hard",
+          "contestModeSpecific": false
+        },
+        {
+          "id": "hefnd-encounter-flow",
+          "name": "Overall Encounter Flow and Progression",
+          "description": "The encounter requires constant corruption management while navigating multiple levels: transfer Hex stacks to Hex-Drinkers, cleanse lanterns across all levels, manage adds, initiate damage phases, damage boss, repeat. At approximately 5% health, final stand phase triggers where all players are teleported to the top platform and must destroy Blighted Eyes to extend damage. Players must coordinate across multiple floors while managing debuffs and completing mechanics simultaneously.",
+          "type": "boss",
+          "solution": "Continuous: Transfer Hex of Vengeful Corruption timer to Hex-Drinkers via melee. Navigate between multiple levels. Cycle: Cleanse Scorn Lanterns across all levels → Manage corruption (transfers + cleansing) → Initiate damage phase → Damage Hefnd's Vengeance while continuing corruption management → Repeat cycle. Final Stand (~5% health): All players teleported to top platform → Boss continuously spawns Blighted Eyes → Destroy eyes to extend damage phase → Focus fire on boss → No time limit. Assign roles: some players handle specific levels, others focus on Hex transfers, others manage adds. Coordinate across all levels. Maximize corruption management to extend damage phases.",
+          "tips": [
+            "Constant Hex transfer management required",
+            "Navigate between multiple levels",
+            "Cycle: Lanterns → Corruption Management → Damage → Repeat",
+            "At ~5% health: Final stand phase begins",
+            "Final stand: Teleported to top platform, destroy Blighted Eyes to extend damage",
+            "Coordinate across all floors",
+            "Assign level-specific roles",
+            "Transfer Hex timer debuffs regularly before they reach 0",
+            "Cleanse lanterns on all levels",
+            "Maximize corruption management for longer damage phases",
+            "Balance mechanics with add clear",
+            "Boss may move between levels"
+          ],
+          "difficulty": "expert",
+          "contestModeSpecific": false
+        }
+      ]
+    }
+  ],
+  "theme": {
+    "setting": "Frozen wasteland and Scorn stronghold",
+    "aesthetic": "Dark, cold, desolate environment with Scorn architecture. Features frozen landscapes, corrupted structures, and wish-empowered golden elements contrasting with dark corruption. The atmosphere is oppressive and dangerous, with environmental hazards emphasizing the harsh setting.",
+    "enemyFaction": "Scorn (wish-empowered and corrupted variants)",
+    "thematicElements": [
+      "Wish magic and corruption duality (corrupted vs wish-empowered lanterns)",
+      "Frozen wasteland setting with extreme cold",
+      "Scorn Broken Knights as key enemies",
+      "Multi-level vertical structures",
+      "Corruption and cleansing mechanics",
+      "Cage imprisonment and escape themes",
+      "Blighted and corrupted visual elements"
+    ]
+  },
+  "commonMechanics": [
+    {
+      "id": "common-scorn-lanterns",
+      "name": "Scorn Lantern Cleansing",
+      "description": "Scorn Lanterns appear in a corrupted (dark/purple) state and must be cleansed to wish-empowered (golden/bright) state by interacting with them. Cleansed lanterns are used for various mechanics including damage phase extension, charge generation, and corruption management. This mechanic appears in all three encounters.",
+      "appearsIn": ["rathil", "locus", "hefnd"]
+    },
+    {
+      "id": "common-corruption-theme",
+      "name": "Corruption and Cleansing Theme",
+      "description": "Throughout the dungeon, players encounter corruption that must be cleansed or managed. This includes corrupted lanterns, corruption debuffs (Hex of Vengeful Corruption), and corrupted enemies. Cleansing corruption is a core mechanic that appears in various forms across all encounters.",
+      "appearsIn": ["rathil", "locus", "hefnd"]
+    },
+    {
+      "id": "common-damage-phase-extension",
+      "name": "Damage Phase Extension Mechanics",
+      "description": "Multiple encounters feature mechanics that extend damage phase duration. Activating cleansed lanterns, managing corruption, and completing mechanics properly all contribute to longer damage windows. Maximizing these extensions is crucial for meeting DPS requirements.",
+      "appearsIn": ["rathil", "locus", "hefnd"]
+    },
+    {
+      "id": "common-scorn-broken-knights",
+      "name": "Scorn Broken Knights",
+      "description": "Scorn Broken Knights are special enemies that appear throughout the dungeon. They serve various roles including spawning lanterns, acting as priority targets, and representing the wish-empowered Scorn theme. They are more dangerous than standard Scorn enemies.",
+      "appearsIn": ["rathil", "locus", "hefnd"]
+    }
+  ],
+  "traversalMechanics": [
+    {
+      "id": "traversal-frozen-wasteland",
+      "name": "Frozen Wasteland Navigation",
+      "description": "Between encounters, players navigate through frozen wasteland environments. The traversal sections may feature environmental hazards, platforming challenges, and Scorn enemies. The cold theme is maintained throughout traversal sections."
+    },
+    {
+      "id": "traversal-multi-level-navigation",
+      "name": "Multi-Level Structure Navigation",
+      "description": "The final encounter features significant vertical navigation through a multi-level structure. Players must move between floors using platforms, pathways, and jump mechanics. This navigation is integrated into the encounter mechanics rather than being separate traversal sections."
+    },
+    {
+      "id": "traversal-cage-escape",
+      "name": "Cage Escape Mechanics",
+      "description": "In the first encounter, players experience cage teleportation and must escape by destroying Blighted Eyes. This represents a unique traversal/escape mechanic integrated into combat."
+    }
+  ],
+  "uniqueMechanics": [
+    {
+      "id": "unique-biting-cold",
+      "name": "Biting Cold Environmental Hazard",
+      "description": "The Locus of Wailing Grief encounter features the unique Biting Cold debuff that continuously stacks and requires players to stay near burning torches. This is the only encounter with this specific environmental hazard mechanic.",
+      "encounter": "locus"
+    },
+    {
+      "id": "unique-hex-vengeful-corruption",
+      "name": "Hex of Vengeful Corruption Transfer",
+      "description": "The final encounter features the Hex of Vengeful Corruption debuff that must be transferred to Corrupted Hex-Drinkers via melee attacks. This unique mechanic requires active debuff management through enemy interaction.",
+      "encounter": "hefnd"
+    },
+    {
+      "id": "unique-solar-charges",
+      "name": "Solar Charge Collection and Deposition",
+      "description": "The Locus encounter features Solar Charges that drop from cleansed lanterns and must be deposited into braziers. This charge-based mechanic is unique to this encounter.",
+      "encounter": "locus"
+    },
+    {
+      "id": "unique-blighted-eyes",
+      "name": "Blighted Eyes Cage Breaking",
+      "description": "The first encounter features Blighted Eyes that must be destroyed to escape from cages. This escape mechanic is unique to the Rathil encounter.",
+      "encounter": "rathil"
+    }
+  ]
+}
